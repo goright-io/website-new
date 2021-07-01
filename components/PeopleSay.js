@@ -1,6 +1,5 @@
 import { Text, Icon, Testimonial } from "@goright/design-system";
 
-import "react-multi-carousel/lib/styles.css";
 const testimonials = [
   {
     name: "Junaid Rasheed",

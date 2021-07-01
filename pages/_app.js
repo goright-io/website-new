@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "@components/layout";
+import "@goright/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {

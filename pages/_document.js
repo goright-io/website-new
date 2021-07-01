@@ -2,7 +2,6 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import ReactGA from "react-ga";
 const GA_TRACKING_ID = "UA-185519437-1";
 const OPT_CONTAINER_ID = "OPT-KRWKXQN";
-
 function trackPageView() {
   if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
     return;
@@ -30,7 +29,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* Fonts */}
-          <link href="/fonts/styles.css" rel="stylesheet" />
+          {/* <link href="/fonts/styles.css" rel="stylesheet" /> */}
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

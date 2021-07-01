@@ -1,8 +1,7 @@
 import React from "react";
 import { Text, Emoji, Card, Icon } from "@goright/design-system";
 // import Header from "@components/header";
-import { Link as NextLink } from "next/link";
-console.log("🚀 ~ file: index.js ~ line 5 ~ Link", NextLink);
+import Link from "next/link";
 import WorkshopContent from "../components/WorkshopContent";
 import Deliverables from "../components/Deliverables";
 import WhyAttend from "../components/WhyAttend";
@@ -45,7 +44,6 @@ export default function IndexPage() {
               text: "Get early-bird tickets",
               href: "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
             }}
-            linkComponent={NextLink}
           >
             <div className="mb-8">
               <Text variant="smBolder" className="mb-3">
@@ -58,7 +56,6 @@ export default function IndexPage() {
           <Card
             heading="Need a custom workshop for your team?"
             link={{ text: "Let's talk", href: "/contact" }}
-            linkComponent={NextLink}
           />
         </div>
       </div>

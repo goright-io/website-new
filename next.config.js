@@ -6,6 +6,9 @@ module.exports = {
     });
 
     return config;
+    config.node = {
+      fs: "empty",
+    };
   },
   pageExtensions: ["js", "jsx"],
   // trailingSlash: true,
