@@ -5,13 +5,13 @@ import { Nav, Button, Logo } from "@goright/design-system";
 
 const navItems = [
   {
-    name: "Workshops",
-    href: "/workshops",
+    name: "Workshop",
+    href: "/workshop",
   },
-  {
-    name: "Services",
-    href: "/services",
-  },
+  // {
+  //   name: "Services",
+  //   href: "/services",
+  // },
   {
     name: "About us",
     href: "/about",
@@ -26,13 +26,24 @@ export default function Header() {
   );
   return (
     <header className="flex items-center w-full px-10 pt-8 mx-auto">
-      <Logo className="mr-auto" />
+      <Link href="/">
+        <a>
+          <Logo className="mr-auto" />
+        </a>
+      </Link>
       <Nav
         items={navItems}
         linkComponent={linkComponent}
         className="w-5/12 mx-auto"
       />
-      <Button size="small" label="Let's&nbsp;talk" />
+      <Button
+        size="small"
+        label="Let's&nbsp;talk"
+        as="a"
+        href="mailto:mail@varya.me"
+        target="_blank"
+        rel="noopener"
+      />
     </header>
   );
 }

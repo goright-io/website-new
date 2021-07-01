@@ -15,7 +15,7 @@ const config = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
 
 let finalConfig = resolveConfig(goRightConfig, config);
