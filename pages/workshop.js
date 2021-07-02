@@ -64,7 +64,8 @@ export default function Workshop() {
       <WorkshopContent />
       <Deliverables />
       <WhyAttend />
-      <TeamsAttended />
+      {/* Hidden until confirmation that we can use these logos */}
+      {/* <TeamsAttended /> */}
       <PeopleSay />
       <WhoAreWe />
       <CustomWorkshop />
