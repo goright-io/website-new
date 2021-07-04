@@ -43,7 +43,7 @@ finalConfig.purge = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/\\@goright/design-system/dist/**/*.js",
   ],
-  safelist: ["bg-highlight-yellow-100", "bg-highlight-primary-100"],
+  safelist: ["bg-highlight-yellow-100", "bg-highlight-primary-100", "bg-6Xl"],
 };
 
 module.exports = finalConfig;

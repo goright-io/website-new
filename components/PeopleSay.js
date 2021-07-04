@@ -41,7 +41,8 @@ export default function PeopleSay() {
         </Text>
       </div>
       <div className="">
-        <Testimonial testimonials={testimonials} />
+        <Testimonial      
+ testimonials={testimonials} />
       </div>
     </div>
   );

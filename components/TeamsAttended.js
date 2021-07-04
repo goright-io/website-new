@@ -23,7 +23,7 @@ export default function TeamsAttended() {
         {logos.length > 0 &&
           logos.map((name) => (
             <div key={name} className="max-h-full mx-2">
-              <img src={`/logo/${name}_logo.png`} alt={`${name} logo`} />
+              <img src={`./logo/${name}_logo.png`} alt={`${name} logo`} />
             </div>
           ))}
       </div>

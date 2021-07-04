@@ -2,7 +2,7 @@ import { useState } from "react";
 // import Nav from "@components/nav";
 import Link from "next/link";
 import { Nav, Button, Logo } from "@goright/design-system";
-
+import { useRouter } from "next/router";
 const navItems = [
   {
     name: "Workshop",
@@ -18,6 +18,7 @@ const navItems = [
   },
 ];
 export default function Header() {
+  const { asPath  } = useRouter();
   // In Next.js we cannot just pass a link, because it's not picking classes. See: https://github.com/vercel/next.js/issues/272
   const linkComponent = ({ className, children, ...props }) => (
     <Link {...props}>
@@ -35,12 +36,13 @@ export default function Header() {
         items={navItems}
         linkComponent={linkComponent}
         className="w-5/12 mx-auto"
+        currentPath={asPath}
       />
       <Button
         size="small"
         label="Let's&nbsp;talk"
         as="a"
-        href="mailto:mail@varya.me"
+        href="mailto:hello@goright.io"
         target="_blank"
         rel="noopener"
       />

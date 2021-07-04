@@ -22,7 +22,7 @@ export default function CustomWorkshop() {
         className="justify-center w-64 mt-8"
         label="Let's talk"
         as="a"
-        href="mailto:mail@varya.me"
+        href="mailto:hello@goright.io"
         target="_blank"
         rel="noopener"
       />

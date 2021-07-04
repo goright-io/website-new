@@ -18,10 +18,12 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-baseline justify-center flex-grow md:flex-row">
             <Text variant="lg">
-              Upcoming workshop: 1 & 2 SEPTEMBER 11-15 EEST
+              Upcoming workshop: 1{"\u00A0"}&{"\u00A0"}2{"\u00A0"}SEPTEMBER,
+              {"\u00A0"}
+              11-15{"\u00A0"}EEST
             </Text>
             <CtaLink
-              className="md:ml-8 text-light-on-background-50 hover:text-light-on-background-50"
+              className="md:ml-8 text-light-on-background-50 !hover:text-light-on-background-50 whitespace-nowrap"
               target="_blank"
               rel="noopener"
               href="https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129"
