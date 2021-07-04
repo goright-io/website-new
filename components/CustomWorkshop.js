@@ -18,7 +18,14 @@ export default function CustomWorkshop() {
         will be an opportunity for the team to discuss questions they might have
         about implementing a design system.
       </Text>
-      <Button className="justify-center w-64 mt-8" label="Let's talk" />
+      <Button
+        className="justify-center w-64 mt-8"
+        label="Let's talk"
+        as="a"
+        href="mailto:hello@goright.io"
+        target="_blank"
+        rel="noopener"
+      />
     </div>
   );
 }

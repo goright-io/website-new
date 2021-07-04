@@ -1,3 +1,4 @@
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   webpack: (config) => {
     config.module.rules.push({
@@ -11,5 +12,6 @@ module.exports = {
     };
   },
   pageExtensions: ["js", "jsx"],
-  // trailingSlash: true,
+  basePath: isProd ? "/website-new" : "",
+  assetPrefix: isProd ? "/website-new/" : "",
 };

@@ -996,10 +996,10 @@
   dependencies:
     purgecss "^4.0.3"
 
-"@goright/design-system@0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@goright/design-system/-/design-system-0.0.12.tgz#3c9bf30e46e1b6f2052d1e2f5358230d92784036"
-  integrity sha512-IT+tX5JLpz3K/wk0IFIW8+N7VNvIMvRGg5mO0Hvch0zpRc3Od+jWtJuzBvVGksvEUcPm85krg0dnSeyQo4hR2A==
+"@goright/design-system@0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@goright/design-system/-/design-system-0.0.14.tgz#84df32dda00ad3a238921b274f846c1b6e4f0a25"
+  integrity sha512-QteDyfbu0IwNqcDqEia5EsntyaC4y229FP/ku4RDsN15zykyLySKgMcWEN22WCATD+UZ/gn1sD3gncoTmYs+fA==
   dependencies:
     "@carbon/icons-react" "^10.32.0"
     "@tailwindcss/typography" "^0.4.1"
@@ -1198,6 +1198,11 @@
   integrity sha512-PyRA9sm1Yayuj5OIoJ1hGt2YISX45w9WcFbh6ddT0Z/0yaFxOtGLInr4jUfU1EAFVs0Yfyfev4RNwBlUaHdlDQ==
   dependencies:
     defer-to-connect "^2.0.0"
+
+"@tailwindcss/aspect-ratio@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.2.1.tgz#a7ce776688b8218d9559a6918f0bccc58f0f16dd"
+  integrity sha512-aDFi80aHQ3JM3symJ5iKU70lm151ugIGFCI0yRZGpyjgQSDS+Fbe93QwypC1tCEllQE8p0S7TUu20ih1b9IKLA==
 
 "@tailwindcss/typography@^0.4.1":
   version "0.4.1"
