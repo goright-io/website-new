@@ -23,7 +23,7 @@ export default function Footer() {
               11-15{"\u00A0"}EEST
             </Text>
             <CtaLink
-              className="md:ml-8 text-light-on-background-50 !hover:text-light-on-background-50 whitespace-nowrap"
+              className="md:ml-8 text-light-on-background-50 hover:!text-light-on-background-50 whitespace-nowrap"
               target="_blank"
               rel="noopener"
               href="https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129"
