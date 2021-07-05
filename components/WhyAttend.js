@@ -9,7 +9,7 @@ export default function WhyAttend() {
           Why Attend
         </Text>
       </div>
-      <div className="grid grid-cols-2 mt-10 gap-x-20 gap-y-16">
+      <div className="grid grid-cols-3 mt-10 gap-x-20 gap-y-16">
         <div className="">
           <Text as="h3" variant="2Xl">
             As a Designer
@@ -35,26 +35,26 @@ export default function WhyAttend() {
             as="ul"
             className="mt-6 list-disc list-inside list"
           >
-            <li>Practice UI inventory</li>
-            <li className="mt-3">Run brand-changes in nearly zero time</li>
+            <li>Practice component-driven development</li>
+            <li className="mt-3">Learn tips and tricks of making a pattern library</li>
             <li className="mt-3">
-              Learn how to organize the components in Figma
+              Practice React, Storybook, and styled-components
             </li>
           </Text>
         </div>
         <div className="">
           <Text as="h3" variant="2Xl">
-            As a Product Owner
+            As a Team
           </Text>
           <Text
             variant="lgBolder"
             as="ul"
             className="mt-6 list-disc list-inside list"
           >
-            <li>Practice UI inventory</li>
-            <li className="mt-3">Run brand-changes in nearly zero time</li>
+            <li>Automate design and development processes</li>
+            <li className="mt-3">Learn to work with a design system in a multifunctional team</li>
             <li className="mt-3">
-              Learn how to organize the components in Figma
+              Practice DS development cycle: create, maintain and keep coherent
             </li>
           </Text>
         </div>
