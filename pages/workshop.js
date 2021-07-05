@@ -10,9 +10,16 @@ import PeopleSay from "../components/PeopleSay";
 import WhatYouWillLearn from "../components/WhatYouWillLearn";
 import CustomWorkshop from "../components/CustomWorkshop";
 
-export default function Workshop() {
+import Head from "next/head";
+
+export default function Workshop({ canonical }) {
   return (
     <>
+      {canonical && (
+        <Head>
+          <link rel="canonical" href={canonical} />
+        </Head>
+      )}
       {/***** HERO SECTION *****/}
       <div className="leading-normal tracking-normal text-center text-light-on-background-900">
         <Text as="p" variant="xlBolder" className="mt-24">
@@ -72,3 +79,13 @@ export default function Workshop() {
     </>
   );
 }
+
+Workshop.getInitialProps = async ({
+  req,
+  pathname,
+  query: { hasCanonical },
+}) => {
+  const getFullUrl = () =>
+    req ? req.protocol + "://" + req.get("host") + req.originalUrl : pathname;
+  return { canonical: hasCanonical ? getFullUrl() : null };
+};
