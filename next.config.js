@@ -36,4 +36,5 @@ module.exports = {
   trailingSlash: true,
   basePath: getBase,
   assetPrefix: getBase && getBase + "/",
+
 };
