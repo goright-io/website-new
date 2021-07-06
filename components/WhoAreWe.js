@@ -7,7 +7,7 @@ import classnames from "classnames";
 const people = [
   {
     name: "Varya Stepanova",
-    avatar: "./varya.png",
+    avatar: "/varya.png",
     title: "Design systems architect and engineering manager",
     bio: `As an independent consultant, Varya helps companies to launch and
             boost their design systems. Her major focus is bridging the gap for
@@ -20,7 +20,7 @@ const people = [
   },
   {
     name: "Sherif Saleh",
-    avatar: "./sherif.png",
+    avatar: "/sherif.png",
     title: "Senior product designer",
     bio: `Sherif is a senior product designer. He crafts deligthful experiences through data analytics, user research, prototypes and validation. Sherif has extensive experience with design systems and years of working for financial services, banks  and automotive.`,
     linkedin: "https://www.linkedin.com/in/salehsherif/",

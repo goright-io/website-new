@@ -9,7 +9,6 @@ import WhoAreWe from "@components/WhoAreWe";
 import PeopleSay from "@components/PeopleSay";
 import WhatYouWillLearn from "@components/WhatYouWillLearn";
 import CustomWorkshop from "@components/CustomWorkshop";
-
 import Head from "next/head";
 
 export default function Workshop({ canonical }) {

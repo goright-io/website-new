@@ -1,7 +1,11 @@
-// const isProd = process.env.NODE_ENV === "production";
+
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/,
+});
+
 const exportPath = process.env.GORIGHT_EXPORT;
 
-module.exports = {
+module.exports = withMDX({
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -24,8 +28,9 @@ module.exports = {
     }
     return exportPathMap;
   },
-  pageExtensions: ["js", "jsx"],
+  pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: true,
   basePath: exportPath,
   assetPrefix: exportPath && exportPath + "/",
 };
+

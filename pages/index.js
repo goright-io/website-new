@@ -14,7 +14,7 @@ export default function IndexPage() {
         </Text>
         .
       </Text>
-      <Link href="/workshop">
+      <Link href="/hands-on-workshop">
         <CtaLink as="a" className="mt-16 animate-fadeindelay">
           Check our workshop
         </CtaLink>
