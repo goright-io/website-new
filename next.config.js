@@ -1,13 +1,5 @@
-const isProd = process.env.NODE_ENV === "production";
-
+// const isProd = process.env.NODE_ENV === "production";
 const exportPath = process.env.GORIGHT_EXPORT;
-
-const getBase = ((isProd, exportPath) => {
-  if (!isProd) return null;
-  if (exportPath) return exportPath;
-  return "/website-new";
-})(isProd, exportPath);
-console.log("🚀 ~ file: next.config.js ~ line 10 ~ getBase ~ getBase", getBase);
 
 module.exports = {
   webpack: (config) => {
@@ -34,7 +26,6 @@ module.exports = {
   },
   pageExtensions: ["js", "jsx"],
   trailingSlash: true,
-  basePath: getBase,
-  assetPrefix: getBase && getBase + "/",
-
+  basePath: exportPath,
+  assetPrefix: exportPath && exportPath + "/",
 };
