@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const navItems = [
   {
     name: "Workshop",
-    href: "/workshop",
+    href: "/hands-on-workshop",
   },
   // {
   //   name: "Services",

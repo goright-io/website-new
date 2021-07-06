@@ -1,14 +1,14 @@
 import React from "react";
 import { Text, Emoji, Card, Icon } from "@goright/design-system";
 import Link from "next/link";
-import WorkshopContent from "../components/WorkshopContent";
-import Deliverables from "../components/Deliverables";
-import WhyAttend from "../components/WhyAttend";
-import TeamsAttended from "../components/TeamsAttended";
-import WhoAreWe from "../components/WhoAreWe";
-import PeopleSay from "../components/PeopleSay";
-import WhatYouWillLearn from "../components/WhatYouWillLearn";
-import CustomWorkshop from "../components/CustomWorkshop";
+import WorkshopContent from "@components/WorkshopContent";
+import Deliverables from "@components/Deliverables";
+import WhyAttend from "@components/WhyAttend";
+import TeamsAttended from "@components/TeamsAttended";
+import WhoAreWe from "@components/WhoAreWe";
+import PeopleSay from "@components/PeopleSay";
+import WhatYouWillLearn from "@components/WhatYouWillLearn";
+import CustomWorkshop from "@components/CustomWorkshop";
 
 import Head from "next/head";
 
@@ -66,7 +66,6 @@ export default function Workshop({ canonical }) {
           />
         </div>
       </div>
-      {/***** WHAT YOU WILL LEARN *****/}
       <WhatYouWillLearn />
       <WorkshopContent />
       <Deliverables />

@@ -28,15 +28,15 @@ const people = [
     align: "reverse",
   },
 ];
-export default function WhoAreWe() {
+export default function WhoAreWe({showHeader = true}) {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <div className="flex items-start">
+      {showHeader && <div className="flex items-start">
         <Icon name="Group32" className="mr-6" />
         <Text variant="6Xl" as="h2">
           Who Are We
         </Text>
-      </div>
+      </div>}
       {people.map((person) => (
         <div
           key={person.name}
