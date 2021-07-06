@@ -1,3 +1,7 @@
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/,
+});
+
 const isProd = process.env.NODE_ENV === "production";
 
 const exportPath = process.env.GORIGHT_EXPORT;
@@ -9,7 +13,7 @@ const getBase = ((isProd, exportPath) => {
 })(isProd, exportPath);
 console.log("🚀 ~ file: next.config.js ~ line 10 ~ getBase ~ getBase", getBase);
 
-module.exports = {
+module.exports = withMDX({
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -32,9 +36,8 @@ module.exports = {
     }
     return exportPathMap;
   },
-  pageExtensions: ["js", "jsx"],
+  pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: true,
   basePath: getBase,
   assetPrefix: getBase && getBase + "/",
-
-};
+});
