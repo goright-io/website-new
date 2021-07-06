@@ -1,17 +1,9 @@
+
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
 
-const isProd = process.env.NODE_ENV === "production";
-
 const exportPath = process.env.GORIGHT_EXPORT;
-
-const getBase = ((isProd, exportPath) => {
-  if (!isProd) return null;
-  if (exportPath) return exportPath;
-  return "/website-new";
-})(isProd, exportPath);
-console.log("🚀 ~ file: next.config.js ~ line 10 ~ getBase ~ getBase", getBase);
 
 module.exports = withMDX({
   webpack: (config) => {
@@ -38,6 +30,7 @@ module.exports = withMDX({
   },
   pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: true,
-  basePath: getBase,
-  assetPrefix: getBase && getBase + "/",
-});
+  basePath: exportPath,
+  assetPrefix: exportPath && exportPath + "/",
+};
+
