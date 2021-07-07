@@ -32,5 +32,5 @@ module.exports = withMDX({
   trailingSlash: true,
   basePath: exportPath,
   assetPrefix: exportPath && exportPath + "/",
-};
+});
 
