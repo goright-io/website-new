@@ -7,7 +7,6 @@ const defaultConfig = require("tailwindcss/defaultConfig");
 const resolveConfig = require("tailwindcss/resolveConfig");
 
 const config = {
-  important: true,
   mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -30,7 +29,10 @@ const config = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringColor: ["group-focus"],
+      ringWidth: ["group-focus"],
+    },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
 };

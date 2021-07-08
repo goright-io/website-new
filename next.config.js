@@ -1,4 +1,3 @@
-
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
@@ -18,19 +17,29 @@ module.exports = withMDX({
     };
   },
   exportPathMap: async (defaultPathMap) => {
-    let exportPathMap = defaultPathMap;
+    const resultMap = {
+      "/handout/v2/releasing-library": {
+        page: "/hands-on-workshop/handout/v2/releasing-library",
+        query: { canonical: true },
+      },
+    };
+
     if (exportPath && exportPath in defaultPathMap) {
-      exportPathMap = {
-        "/": Object.assign(defaultPathMap[exportPath], {
-          query: { canonical: true },
-        }),
-      };
+      const exportPaths = Object.keys(defaultPathMap).forEach((path) => {
+        if (path.startsWith(exportPath)) {
+          const newPath =
+            path.length === exportPath.length
+              ? "/"
+              : path.substring(exportPath.length);
+          resultMap[newPath] = Object.assign(defaultPathMap[path], {
+            query: { canonical: true },
+          });
+        }
+      });
+      return resultMap;
     }
-    return exportPathMap;
+    return defaultPathMap;
   },
   pageExtensions: ["js", "jsx", "mdx"],
-  trailingSlash: true,
-  basePath: exportPath,
-  assetPrefix: exportPath && exportPath + "/",
+  trailingSlash: true, // keep true
 });
-

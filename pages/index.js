@@ -1,5 +1,6 @@
 import { Text, Emoji, Card, Icon, CtaLink } from "@goright/design-system";
-import Link from "next/link";
+import Link from "@components/link";
+
 export default function IndexPage() {
   return (
     <div className="mt-48 text-center">
@@ -14,11 +15,13 @@ export default function IndexPage() {
         </Text>
         .
       </Text>
-      <Link href="/hands-on-workshop">
-        <CtaLink as="a" className="mt-16 animate-fadeindelay">
-          Check our workshop
-        </CtaLink>
-      </Link>
+      <CtaLink
+        href="/hands-on-workshop"
+        as={Link}
+        className="mt-16 animate-fadeindelay"
+      >
+        Check our workshop
+      </CtaLink>
     </div>
   );
 }

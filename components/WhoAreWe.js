@@ -1,7 +1,7 @@
 import { Text, Icon } from "@goright/design-system";
 import TwitterIcon from "../public/twitter.svg";
 import LinkedinIcon from "../public/linkedin.svg";
-import Link from "next/link";
+import Link from "@components/link";
 import classnames from "classnames";
 
 const people = [
@@ -28,15 +28,17 @@ const people = [
     align: "reverse",
   },
 ];
-export default function WhoAreWe({showHeader = true}) {
+export default function WhoAreWe({ showHeader = true }) {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      {showHeader && <div className="flex items-start">
-        <Icon name="Group32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          Who Are We
-        </Text>
-      </div>}
+      {showHeader && (
+        <div className="flex items-start">
+          <Icon name="Group32" className="mr-6" />
+          <Text variant="6Xl" as="h2">
+            Who Are We
+          </Text>
+        </div>
+      )}
       {people.map((person) => (
         <div
           key={person.name}
@@ -71,33 +73,29 @@ export default function WhoAreWe({showHeader = true}) {
                 person.align === "reverse" ? "justify-end" : ""
               )}
             >
-              <Link href={person.linkedin}>
-                <a
-                  target="_blank"
-                  rel="nofollow"
-                  className="cursor-pointer hover:opacity-60"
-                >
-                  <TwitterIcon
-                    width="32"
-                    height="32"
-                    fill="currentColor"
-                    className="p-1 mr-5 text-light-on-background-900"
-                  />
-                </a>
+              <Link
+                href={person.linkedin}
+                className="cursor-pointer hover:opacity-60 group outline-0"
+              >
+                <TwitterIcon
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  className="p-1 mr-5 text-light-on-background-900 group-focus:ring-4 group-focus:ring-yellow-100 outline-0"
+                  title="twitter"
+                />
               </Link>
-              <Link href={person.twitter}>
-                <a
-                  target="_blank"
-                  rel="nofollow"
-                  className="cursor-pointer hover:opacity-60"
-                >
-                  <LinkedinIcon
-                    width="32"
-                    height="32"
-                    className="p-1"
-                    fill="currentColor"
-                  />
-                </a>
+              <Link
+                href={person.twitter}
+                className="cursor-pointer hover:opacity-60 group outline-0"
+              >
+                <LinkedinIcon
+                  width="32"
+                  height="32"
+                  className="p-1 group-focus:ring-4 group-focus:ring-yellow-100 outline-0"
+                  fill="currentColor"
+                  title="linkedin"
+                />
               </Link>
             </div>
           </div>

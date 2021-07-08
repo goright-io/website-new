@@ -2,10 +2,9 @@ import React from "react";
 
 import { Text, Card, Badge, Emoji } from "@goright/design-system";
 
-import Link from "next/link";
+import Link from "@components/link";
 
-const pathPrefix = ".";
-
+import { useRouter } from "next/router";
 export const blocks = [
   {
     title: "Workshop flow",
@@ -96,10 +95,13 @@ export const blocks = [
 ];
 
 const Blocks = (props) => {
+  const router = useRouter();
+  const pathPrefix = router.asPath;
+
   return (
     <>
       {blocks.map((block) => {
-        const link = block.url ? block.url : `${pathPrefix}/${block.slug}`;
+        const link = block.url ? block.url : `${pathPrefix}${block.slug}`;
         const enabled = block.day === props.day || props.day === "all";
 
         const blockCard = (
@@ -124,7 +126,7 @@ const Blocks = (props) => {
 
         return enabled ? (
           <Link href={link} key={block.title} className="cursor-pointer">
-            <a>{blockCard}</a>
+            {blockCard}
           </Link>
         ) : (
           <div

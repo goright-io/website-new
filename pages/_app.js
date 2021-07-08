@@ -1,18 +1,25 @@
 import Head from "next/head";
-import Layout from "@components/layout";
+import { LayoutDefault, LayoutWorkshop } from "@components/layout";
 import "@goright/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
 
+const BASE_URL = "https://goright.io";
+
 function MyApp({ Component, pageProps }) {
+  const canonical =
+    pageProps && pageProps.canonical ? pageProps.canonical : null;
+
+  const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
+
   return (
-    <Layout>
+    <LayoutComponent>
       <Head>
         <title>Hands-on with design systems workshop</title>
         <meta
           name="Description"
           content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />{" "}
-        */}
+        />
+        {canonical && <link rel="canonical" href={canonical} />}
         {/* OG tags */}
         <meta
           property="og:title"
@@ -41,8 +48,17 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
-    </Layout>
+    </LayoutComponent>
   );
 }
+
+MyApp.getInitialProps = async ({ ctx: { pathname } }) => {
+  const exportedSubpath = process.env.GORIGHT_EXPORT;
+
+  if (!exportedSubpath) return {};
+
+  let pageProps = { canonical: BASE_URL + pathname };
+  return { pageProps };
+};
 
 export default MyApp;
