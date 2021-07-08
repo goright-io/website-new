@@ -1,97 +1,66 @@
 import React from "react";
 import { Text, Card, Badge, Emoji } from "@goright/design-system";
+import Link from "@components/link";
+import { useRouter } from "next/router";
 
-// import Hero from "@components/hero";
-// import Card from "@components/card";
-// import Ribbon from "@components/ribbon";
-import Link from "next/link";
-// import ToastIcon from "./icons/toast.svg";
-// import ComponentsIcon from "./icons/web-design.svg";
-// import BoxIcon from "./icons/package.svg";
-// import CodingIcon from "./icons/coding.svg";
-// import LegoIcon from "./icons/blocks.svg";
-// import FeedbackIcon from "./icons/chat-box.svg";
-// import DeploymentIcon from "./icons/deployment.svg";
-// import TestingIcon from "./icons/testing.svg";
-// import SyncIcon from "./icons/sync.svg";
-// import SetupIcon from "./icons/setup.svg";
-// import FlagIcon from "./icons/flag.svg";
-// import CheckList from "./icons/check-list.svg";
-// import Sketch from "./icons/sketch2.svg";
-// import SettingsIcon from "./icons/settings.svg";
-// import Flow from "./icons/flow.svg";
-
-const pathPrefix = ".";
 const blocks = [
   {
     title: "Workshop flow",
-    // image: Flow,
     slug: "workshop-flow",
     roles: [],
   },
   {
     title: "Making a toast",
-    // image: ToastIcon,
     slug: "toast",
     roles: ["designer", "developer"],
   },
   {
     title: "Figma setup",
-    // image: SettingsIcon,
     slug: "figma-setup",
     roles: ["designer"],
   },
   {
     title: "Repository setup",
-    // image: SetupIcon,
     slug: "repo-setup",
     roles: ["developer"],
   },
   {
     title: "UI inventory",
-    // image: BoxIcon,
     slug: "ui-inventory",
     roles: ["developer", "designer"],
   },
   {
     title: "Design tokens",
-    // image: Sketch,
     slug: "design-tokens",
     roles: ["designer"],
   },
   {
     title: "Coding the library",
-    // image: CodingIcon,
     slug: "coding-library",
     roles: ["developer"],
   },
   {
     title: "Releasing the library",
-    // image: FlagIcon,
     slug: "releasing-library",
     roles: ["developer"],
   },
   {
     title: "Product update",
-    // image: ComponentsIcon,
     slug: "product-update",
     roles: ["developer"],
   },
   {
     title: "Design Changes",
-    // image: LegoIcon,
     slug: "re-design",
     roles: ["designer"],
   },
   {
     title: "Cast in code",
-    // image: CheckList,
     slug: "cast-in-code",
     roles: ["developer"],
   },
   {
     title: "Product release",
-    // image: DeploymentIcon,
     slug: "product-release",
     roles: ["developer"],
   },
@@ -118,10 +87,13 @@ const blocks = [
 ];
 
 const Blocks = (props) => {
+  const router = useRouter();
+  const pathPrefix = router.asPath;
+
   return (
     <>
       {blocks.map((block) => {
-        const link = block.url ? block.url : `${pathPrefix}/${block.slug}`;
+        const link = block.url ? block.url : `${pathPrefix}${block.slug}`;
 
         const enabled = block.day === props.day || props.day === "all";
 

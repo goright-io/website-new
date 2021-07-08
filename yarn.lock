@@ -1039,10 +1039,10 @@
   dependencies:
     purgecss "^4.0.3"
 
-"@goright/design-system@0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@goright/design-system/-/design-system-0.0.17.tgz#abd40438552c7499090f5fc55aa4d15524f9ff0c"
-  integrity sha512-pqm4BdIPt9Pf/1wZgiv3CfDGQYG0U8HvDfywhmTxLS3n5H/3A3HSWOFKGZ5abqX+l1/SN3wBgQX+cIbBEMTcEg==
+"@goright/design-system@0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@goright/design-system/-/design-system-0.0.19.tgz#f94ab48045f513ff19025ecc936ef52513f130c8"
+  integrity sha512-PLMtl4xyc0uhVW9RRT8cCQ1lvS1YD4BHjzAgQufWCu8qZA3pE96StFRrR21ShtgSm7bL4DcDzha45cfQ46u0aA==
   dependencies:
     "@carbon/icons-react" "^10.32.0"
     "@tailwindcss/typography" "^0.4.1"
