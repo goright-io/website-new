@@ -21,12 +21,15 @@ export default function HandoutLayout(props) {
   };
 
   const mainPagePath = currentPath ? getParentPath(currentPath) : "./";
- 
+
   return (
     <>
       <div className="flex-grow py-8 bg-white border-b">
         <div className="flex bg-white min-w-100">
-          <div className="container max-w-2xl py-2 mx-auto mb-8 text-xl text-left underline">
+          <div
+            className="container max-w-2xl py-2 mx-auto mb-8 text-xl text-left"
+            underline
+          >
             <CtaLink arrow="start" as={Link} href={mainPagePath}>
               Back to the Main page
             </CtaLink>
