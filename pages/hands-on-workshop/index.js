@@ -9,49 +9,31 @@ import PeopleSay from "@components/PeopleSay";
 import WhatYouWillLearn from "@components/WhatYouWillLearn";
 import CustomWorkshop from "@components/CustomWorkshop";
 import Link from "@components/link";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
-export default function Workshop({ canonical }) {
+export default function Workshop({ canonical, baseUrl, ...props }) {
   return (
     <>
-      <Head>
-        <title>Hands-on with design systems workshop by GoRight</title>
-        <meta
-          name="Description"
-          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {/* OG tags */}
-        <meta
-          property="og:title"
-          content="Hands-on with Design Systems: 2-day workshop with Figma & React"
-        />
-        <meta
-          property="og:url"
-          content="https://hands-on-workshop.goright.io"
-        />
-        <meta property="og:image" content="/poster.png" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta
-          name="description"
-          content="Hands-on with Design Systems: 2-day workshop with Figma & React. This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
-        <meta
-          name="keywords"
-          content="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
-        />
-        <meta name="robots" content="index, follow" />
-      </Head>
-      {canonical && (
-        <Head>
-          <link rel="canonical" href={canonical} />
-        </Head>
-      )}
+     <NextSeo
+        title="Hands-on with Design Systems: 2-day workshop with Figma & React"
+        description="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        canonical={canonical}
+        openGraph={{
+          type: "website",
+          locale: "en_IE",
+          url: "https://hands-on-workshop.goright.io",
+          site_name: "GoRight.io",
+          images: [
+            {
+              url: baseUrl + "/poster.png",
+              width: 800,
+              height: 600,
+              alt: "Hands-on Workshop poster",
+            },
+          ]
+        }}
+    />
       {/***** HERO SECTION *****/}
       <div className="leading-normal tracking-normal text-center text-light-on-background-900">
         <Text as="p" variant="xlBolder" className="mt-24">
