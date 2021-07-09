@@ -3,7 +3,7 @@ import React from "react";
 import { Text, Card, Badge, Emoji } from "@goright/design-system";
 
 import Link from "@components/link";
-
+import Head from "next/head";
 import { useRouter } from "next/router";
 export const blocks = [
   {
@@ -143,24 +143,59 @@ const Blocks = (props) => {
 
 export default function HandoutPage() {
   return (
-    <div className="container max-w-5xl mx-auto mt-16">
-      <div className="text-center text-light-on-background-900">
-        <Text variant="xlBolder" className="mb-6">
-          <Emoji symbol="👋 " label="hand" />
-          Welcome
-        </Text>
-        <Text variant="6xl" className="mb-32">
-          Hands-on with design systems workshop handout.
-        </Text>
-        <Text variant="xlBolder" className="mb-6">
-          What's next
-          <Emoji symbol="👇" label="hand" />
-        </Text>
+    <>
+      <Head>
+        <title>Hands-on with design systems workshop by GoRight</title>
+        <meta
+          name="Description"
+          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        />
+        {/* OG tags */}
+        <meta
+          property="og:title"
+          content="Hands-on with Design Systems: 2-day workshop with Figma & React"
+        />
+        <meta
+          property="og:url"
+          content="https://hands-on-workshop.goright.io"
+        />
+        <meta property="og:image" content="/poster.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        />
+        <meta property="og:locale" content="en_GB" />
+        <meta
+          name="description"
+          content="Hands-on with Design Systems: 2-day workshop with Figma & React. This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        />
+        <meta
+          name="keywords"
+          content="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <div className="container max-w-5xl mx-auto mt-16">
+        <div className="text-center text-light-on-background-900">
+          <Text variant="xlBolder" className="mb-6">
+            <Emoji symbol="👋 " label="hand" />
+            Welcome
+          </Text>
+          <Text variant="6xl" className="mb-32">
+            Hands-on with design systems workshop handout.
+          </Text>
+          <Text variant="xlBolder" className="mb-6">
+            What's next
+            <Emoji symbol="👇" label="hand" />
+          </Text>
+        </div>
+        {/* CARDS SECTION */}
+        <div className="grid grid-cols-3 gap-10">
+          <Blocks day={1} />
+        </div>
       </div>
-      {/* CARDS SECTION */}
-      <div className="grid grid-cols-3 gap-10">
-        <Blocks day={1} />
-      </div>
-    </div>
+    </>
   );
 }

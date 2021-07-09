@@ -14,6 +14,39 @@ import Head from "next/head";
 export default function Workshop({ canonical }) {
   return (
     <>
+      <Head>
+        <title>Hands-on with design systems workshop by GoRight</title>
+        <meta
+          name="Description"
+          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {/* OG tags */}
+        <meta
+          property="og:title"
+          content="Hands-on with Design Systems: 2-day workshop with Figma & React"
+        />
+        <meta
+          property="og:url"
+          content="https://hands-on-workshop.goright.io"
+        />
+        <meta property="og:image" content="/poster.png" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        />
+        <meta property="og:locale" content="en_GB" />
+        <meta
+          name="description"
+          content="Hands-on with Design Systems: 2-day workshop with Figma & React. This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        />
+        <meta
+          name="keywords"
+          content="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        />
+        <meta name="robots" content="index, follow" />
+      </Head>
       {canonical && (
         <Head>
           <link rel="canonical" href={canonical} />
@@ -41,7 +74,7 @@ export default function Workshop({ canonical }) {
           Upcoming workshops
           <Emoji symbol="👇" label="hand" />
         </Text>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mt-6">
+        <div className="grid grid-cols-2 gap-10 mt-6 md:grid-cols-3">
           <Card
             key="september"
             heading="1 &amp; 2 SEPTEMBER 11-15 EEST"
@@ -79,4 +112,3 @@ export default function Workshop({ canonical }) {
     </>
   );
 }
-

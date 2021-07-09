@@ -8,38 +8,28 @@ const BASE_URL = "https://goright.io";
 function MyApp({ Component, pageProps }) {
   const canonical =
     pageProps && pageProps.canonical ? pageProps.canonical : null;
-
+  const { baseUrl } = { pageProps };
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
 
   return (
     <LayoutComponent>
       <Head>
-        <title>Hands-on with design systems workshop</title>
-        <meta
-          name="Description"
-          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
+        <title>GoRight</title>
+        <meta name="Description" content="Design system consulting services" />
         {canonical && <link rel="canonical" href={canonical} />}
         {/* OG tags */}
         <meta
           property="og:title"
-          content="Hands-on with Design Systems: 2-day workshop with Figma & React"
+          content="GoRight - design systems consulting and workshops"
         />
-        <meta property="og:url" content="https://hands-on-workshop.varya.me/" />
-        <meta
-          property="og:image"
-          content="https://hands-on-workshop.varya.me/poster.png"
-        />
+        <meta property="og:url" content={baseUrl} />
+        <meta property="og:image" content={baseUrl + "/logo.png"} />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+          content="Design systems consulting services and workshops"
         />
         <meta property="og:locale" content="en_GB" />
-        <meta
-          name="description"
-          content="Hands-on with Design Systems: 2-day workshop with Figma & React. This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
         <meta
           name="keywords"
           content="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
@@ -55,9 +45,9 @@ function MyApp({ Component, pageProps }) {
 MyApp.getInitialProps = async ({ ctx: { pathname } }) => {
   const exportedSubpath = process.env.GORIGHT_EXPORT;
 
-  if (!exportedSubpath) return {};
+  if (!exportedSubpath) return { baseUrl: BASE_URL };
 
-  let pageProps = { canonical: BASE_URL + pathname };
+  let pageProps = { canonical: BASE_URL + pathname, baseUrl: BASE_URL };
   return { pageProps };
 };
 
