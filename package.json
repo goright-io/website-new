@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "next export",
     "export:hands-on-workshop": "GORIGHT_EXPORT=/hands-on-workshop next export -o hands-on-workshop/",
-    "deploy": "gh-pages -d ./out",
+    "deploy": "gh-pages -d ./out"
   },
   "dependencies": {
     "@goright/design-system": "0.0.20",
