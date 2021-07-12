@@ -6,7 +6,6 @@ import Link from "@components/link";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-
 export const blocks = [
   {
     title: "Workshop flow",
@@ -143,10 +142,10 @@ const Blocks = (props) => {
   );
 };
 
-export default function HandoutPage() {
+export default function HandoutPage({ canonical, baseUrl, ...props }) {
   return (
     <>
-     <NextSeo
+      <NextSeo
         noindex={true}
         nofollow={true}
         title="Handout materials for Hands-on with Design Systems Workshop"
@@ -165,9 +164,9 @@ export default function HandoutPage() {
               height: 600,
               alt: "Hands-on Workshop poster",
             },
-          ]
+          ],
         }}
-    />
+      />
 
       <div className="container max-w-5xl mx-auto mt-16">
         <div className="text-center text-light-on-background-900">
