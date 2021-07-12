@@ -1,5 +1,9 @@
+const frontmatterPlugin = require("./lib/frontmatter");
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [frontmatterPlugin],
+  },
 });
 
 const exportPath = process.env.GORIGHT_EXPORT;
