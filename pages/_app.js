@@ -2,52 +2,40 @@ import Head from "next/head";
 import { LayoutDefault, LayoutWorkshop } from "@components/layout";
 import "@goright/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
-
+import { DefaultSeo } from "next-seo";
 const BASE_URL = "https://goright.io";
 
-function MyApp({ Component, pageProps }) {
-  const canonical =
-    pageProps && pageProps.canonical ? pageProps.canonical : null;
-
+function MyApp({ Component,baseUrl, canonical, ...pageProps  }) {
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
 
   return (
     <LayoutComponent>
-      <Head>
-        <title>Hands-on with design systems workshop</title>
-        <meta
-          name="Description"
-          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {/* OG tags */}
-        <meta
-          property="og:title"
-          content="Hands-on with Design Systems: 2-day workshop with Figma & React"
-        />
-        <meta property="og:url" content="https://hands-on-workshop.varya.me/" />
-        <meta
-          property="og:image"
-          content="https://hands-on-workshop.varya.me/poster.png"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta
-          name="description"
-          content="Hands-on with Design Systems: 2-day workshop with Figma & React. This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
-        <meta
-          name="keywords"
-          content="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
-        />
-        <meta name="robots" content="index, follow" />
-      </Head>
-
-      <Component {...pageProps} />
+      <DefaultSeo
+        title="GoRight - design systems consulting and workshops"
+        description="Design systems consulting services and workshops"
+        keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        canonical={canonical}
+        openGraph={{
+          type: "website",
+          locale: "en_IE",
+          url: baseUrl,
+          site_name: "GoRight.io",
+          images: [
+            {
+              url: baseUrl + "/logo.png",
+              width: 800,
+              height: 600,
+              alt: "GoRight logo",
+            },
+          ],
+        }}
+        twitter={{
+          // handle: '@handle',
+          // site: '@goright.io',
+          cardType: 'summary_large_image',
+        }}
+      />
+      <Component canonical={canonical} baseUrl={baseUrl} {...pageProps} />
     </LayoutComponent>
   );
 }
@@ -55,10 +43,10 @@ function MyApp({ Component, pageProps }) {
 MyApp.getInitialProps = async ({ ctx: { pathname } }) => {
   const exportedSubpath = process.env.GORIGHT_EXPORT;
 
-  if (!exportedSubpath) return {};
+  let pageProps = { baseUrl: BASE_URL };
+  if (!exportedSubpath) return pageProps;
 
-  let pageProps = { canonical: BASE_URL + pathname };
-  return { pageProps };
+  return { ...pageProps, canonical: BASE_URL + pathname };
 };
 
 export default MyApp;

@@ -3,8 +3,10 @@ import React from "react";
 import { Text, Card, Badge, Emoji } from "@goright/design-system";
 
 import Link from "@components/link";
-
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
+
+
 export const blocks = [
   {
     title: "Workshop flow",
@@ -143,24 +145,49 @@ const Blocks = (props) => {
 
 export default function HandoutPage() {
   return (
-    <div className="container max-w-5xl mx-auto mt-16">
-      <div className="text-center text-light-on-background-900">
-        <Text variant="xlBolder" className="mb-6">
-          <Emoji symbol="👋 " label="hand" />
-          Welcome
-        </Text>
-        <Text variant="6xl" className="mb-32">
-          Hands-on with design systems workshop handout.
-        </Text>
-        <Text variant="xlBolder" className="mb-6">
-          What's next
-          <Emoji symbol="👇" label="hand" />
-        </Text>
+    <>
+     <NextSeo
+        noindex={true}
+        nofollow={true}
+        title="Handout materials for Hands-on with Design Systems Workshop"
+        description="All the necessary documentation for the participants of the workshop"
+        keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        canonical={canonical}
+        openGraph={{
+          type: "website",
+          locale: "en_IE",
+          url: "https://hands-on-workshop.goright.io/handout",
+          site_name: "GoRight.io",
+          images: [
+            {
+              url: baseUrl + "/poster.png",
+              width: 800,
+              height: 600,
+              alt: "Hands-on Workshop poster",
+            },
+          ]
+        }}
+    />
+
+      <div className="container max-w-5xl mx-auto mt-16">
+        <div className="text-center text-light-on-background-900">
+          <Text variant="xlBolder" className="mb-6">
+            <Emoji symbol="👋 " label="hand" />
+            Welcome
+          </Text>
+          <Text variant="6xl" className="mb-32">
+            Hands-on with design systems workshop handout.
+          </Text>
+          <Text variant="xlBolder" className="mb-6">
+            What's next
+            <Emoji symbol="👇" label="hand" />
+          </Text>
+        </div>
+        {/* CARDS SECTION */}
+        <div className="grid grid-cols-3 gap-10">
+          <Blocks day={1} />
+        </div>
       </div>
-      {/* CARDS SECTION */}
-      <div className="grid grid-cols-3 gap-10">
-        <Blocks day={1} />
-      </div>
-    </div>
+    </>
   );
 }

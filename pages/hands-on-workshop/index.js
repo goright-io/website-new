@@ -9,16 +9,31 @@ import PeopleSay from "@components/PeopleSay";
 import WhatYouWillLearn from "@components/WhatYouWillLearn";
 import CustomWorkshop from "@components/CustomWorkshop";
 import Link from "@components/link";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
-export default function Workshop({ canonical }) {
+export default function Workshop({ canonical, baseUrl, ...props }) {
   return (
     <>
-      {canonical && (
-        <Head>
-          <link rel="canonical" href={canonical} />
-        </Head>
-      )}
+     <NextSeo
+        title="Hands-on with Design Systems: 2-day workshop with Figma & React"
+        description="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
+        keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        canonical={canonical}
+        openGraph={{
+          type: "website",
+          locale: "en_IE",
+          url: "https://hands-on-workshop.goright.io",
+          site_name: "GoRight.io",
+          images: [
+            {
+              url: baseUrl + "/poster.png",
+              width: 800,
+              height: 600,
+              alt: "Hands-on Workshop poster",
+            },
+          ]
+        }}
+    />
       {/***** HERO SECTION *****/}
       <div className="leading-normal tracking-normal text-center text-light-on-background-900">
         <Text as="p" variant="xlBolder" className="mt-24">
@@ -41,7 +56,7 @@ export default function Workshop({ canonical }) {
           Upcoming workshops
           <Emoji symbol="👇" label="hand" />
         </Text>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mt-6">
+        <div className="grid grid-cols-2 gap-10 mt-6 md:grid-cols-3">
           <Card
             key="september"
             heading="1 &amp; 2 SEPTEMBER 11-15 EEST"
@@ -79,4 +94,3 @@ export default function Workshop({ canonical }) {
     </>
   );
 }
-
