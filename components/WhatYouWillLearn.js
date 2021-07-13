@@ -2,14 +2,14 @@ import { Text, Icon } from "@goright/design-system";
 
 export default function WhyAttend() {
   return (
-    <div className="flex max-w-4xl mx-auto mt-28">
-      <div className="flex flex-col items-start justify-start flex-shrink-0 w-2/5">
-        <Icon name="Education32" className="pr-4 mb-4" />
+    <div className="flex flex-col md:flex-row max-w-4xl mx-auto mt-28">
+      <div className="flex items-start justify-start flex-shrink-0 md:flex-col w-full md:w-2/5">
+        <Icon name="Education32" className="pr-4 mb-4 mr-6 md:mr-0" />
         <Text variant="6Xl" as="h2">
           What you will learn?
         </Text>
       </div>
-      <Text variant="xlBolder" as="div" className="">
+      <Text variant="xlBolder" as="div" className="mt-16 md:mt-0">
         <p className="mb-6">
           This workshop helps you learn and practice design systems working in a
           team. You can join as a designer or developer.
