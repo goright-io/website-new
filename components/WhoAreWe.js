@@ -43,19 +43,19 @@ export default function WhoAreWe({ showHeader = true }) {
         <div
           key={person.name}
           className={classnames(
-            "flex mt-16 flex-nowrap",
-            person.align === "reverse" ? "flex-row-reverse" : "flex-row"
+            "flex mt-16 flex-wrap md:flex-nowrap",
+            person.align === "reverse" ? "md:flex-row-reverse" : "flex-row"
           )}
         >
-          <div className="w-4/12">
+          <div className="w-full md:w-4/12 mb-8 md:mb-0">
             <img src={person.avatar} alt={person.name} />
           </div>
           <div
             className={classnames(
-              "mt-auto w-8/12 text-light-on-background-900",
+              "mt-auto w-full md:w-8/12 text-light-on-background-900 ",
               person.align === "reverse"
-                ? "text-right pr-10"
-                : "text-left pl-10"
+                ? "md:text-right md:pr-10"
+                : "text-left md:pl-10"
             )}
           >
             <Text variant="4Xl" as="h3" className="mb-3">
@@ -70,7 +70,7 @@ export default function WhoAreWe({ showHeader = true }) {
             <div
               className={classnames(
                 "flex",
-                person.align === "reverse" ? "justify-end" : ""
+                person.align === "reverse" ? "md:justify-end" : ""
               )}
             >
               <Link

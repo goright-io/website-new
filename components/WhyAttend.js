@@ -9,7 +9,7 @@ export default function WhyAttend() {
           Why Attend
         </Text>
       </div>
-      <div className="grid grid-cols-2 mt-10 gap-x-20 gap-y-16">
+      <div className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-x-20 gap-y-16">
         <div className="">
           <Text as="h3" variant="2Xl">
             As a Designer
@@ -36,7 +36,9 @@ export default function WhyAttend() {
             className="mt-6 list-disc list-inside list"
           >
             <li>Practice component-driven development</li>
-            <li className="mt-3">Learn tips and tricks of making a pattern library</li>
+            <li className="mt-3">
+              Learn tips and tricks of making a pattern library
+            </li>
             <li className="mt-3">
               Practice React, Storybook, and styled-components
             </li>
@@ -52,7 +54,9 @@ export default function WhyAttend() {
             className="mt-6 list-disc list-inside list"
           >
             <li>Automate design and development processes</li>
-            <li className="mt-3">Learn to work with a design system in a multifunctional team</li>
+            <li className="mt-3">
+              Learn to work with a design system in a multifunctional team
+            </li>
             <li className="mt-3">
               Practice DS development cycle: create, maintain and keep coherent
             </li>
