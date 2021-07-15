@@ -42,14 +42,16 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
         </Text>
         <Text as="h1" variant="6Xl" className="max-w-3xl mx-auto mt-4">
           2-day workshop on{"\u00A0"}building{"\u00A0"}a design system with{" "}
-          <Text as="span" variant="6Xl" highlight="yellow-100">
-            Figma
-          </Text>{" "}
-          and{" "}
-          <Text as="span" variant="6Xl" highlight="primary-100">
-            React
-          </Text>
-          .
+          <span className="md:block">
+            <Text as="span" variant="6Xl" highlight="yellow-100">
+              Figma
+            </Text>{" "}
+            and{" "}
+            <Text as="span" variant="6Xl" highlight="primary-100">
+              React
+            </Text>
+            .
+          </span>
         </Text>
         <Text variant="xlBolder" className="mt-16">
           Upcoming workshops
@@ -61,8 +63,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             heading="1 &amp; 2 SEPTEMBER 11-15 EEST"
             link={{
               text: "Get early-bird tickets",
-              href:
-                "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
+              href: "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
             }}
             linkComponent={Link}
           >
@@ -92,5 +93,5 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
       <WhoAreWe />
       <CustomWorkshop />
     </>
-  );
+  )
 }
