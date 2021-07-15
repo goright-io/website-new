@@ -2,11 +2,11 @@ import { Text, Icon } from "@goright/design-system";
 
 export default function WhyAttend() {
   return (
-    <div className="flex flex-col md:flex-row max-w-4xl mx-auto mt-28">
-      <div className="flex items-start justify-start flex-shrink-0 md:flex-col w-full md:w-2/5">
+    <div className="flex flex-col max-w-4xl mx-auto md:flex-row mt-28">
+      <div className="flex items-start justify-start flex-shrink-0 w-full md:flex-col md:w-2/5">
         <Icon name="Education32" className="pr-4 mb-4 mr-6 md:mr-0" />
         <Text variant="6Xl" as="h2">
-          What you will learn?
+          What you <span className="md:block">will learn?</span>
         </Text>
       </div>
       <Text variant="xlBolder" as="div" className="mt-16 md:mt-0">
@@ -29,5 +29,5 @@ export default function WhyAttend() {
         </p>
       </Text>
     </div>
-  );
+  )
 }

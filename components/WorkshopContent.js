@@ -3,51 +3,51 @@ import { Text, Icon, Timetable } from "@goright/design-system";
 export default function WorkshopContent() {
   const timetableDay1 = [
     {
-      color: "bg-accent-red",
-      description: "What are design systems",
+      color: "bg-light-on-background-900",
+      description: "Say Hi 👋",
       name: "Introduction",
       time: "10.00 – 10:30",
     },
     {
-      color: "bg-accent-red",
+      color: "bg-light-on-background-900",
       description: "Icebreaker exercise",
-      name: "Introduction",
+      name: "Teams",
       time: "10.30 – 11:00",
     },
     {
-      color: "bg-accent-purple",
+      color: "bg-light-on-background-900",
       description: "Setting up Figma project and project repository",
       name: "Design and process",
       time: "11.00 – 11:40",
     },
     {
-      color: "bg-accent-purple",
+      color: "bg-light-on-background-900",
       description: "UI inventory and scoping",
       name: "Design and process",
       time: "11.40 – 12:15",
     },
     {
-      color: "bg-accent-turqoise",
+      color: "bg-light-on-background-900",
       description: "",
-      name: "LUNCH BREAK",
+      name: "Lunch break",
       time: "12.15 – 12:45",
     },
     {
-      color: "bg-accent-purple",
+      color: "bg-light-on-background-900",
       description: "UI inventory discussion",
       name: "Design and process",
       time: "12.45 – 13:00",
     },
 
     {
-      color: "bg-accent-blue",
+      color: "bg-light-on-background-900",
       description:
         "Design tokens foundation. Intro to visual regression testing",
       name: "Designing and building the library",
       time: "13.00 – 13:30",
     },
     {
-      color: "bg-accent-blue",
+      color: "bg-light-on-background-900",
       description: "Hands-on practice",
       name: "Designing and building the library",
       time: "13.30 – 14:00",
@@ -55,14 +55,14 @@ export default function WorkshopContent() {
   ];
   const timetableDay2 = [
     {
-      color: "bg-accent-blue",
+      color: "bg-light-on-background-900",
       description:
         "Coding and documenting the components. New design challenge",
       name: "Designing and building the library",
       time: "10.00 – 11:45",
     },
     {
-      color: "bg-accent-red",
+      color: "bg-light-on-background-900",
       description:
         "Versioning and release. Documenting components in ZeroHeight",
       name: "Design system lifecycle",
@@ -70,19 +70,19 @@ export default function WorkshopContent() {
     },
 
     {
-      color: "bg-accent-turqoise",
+      color: "bg-light-on-background-900",
       description: "",
       name: "LUNCH BREAK",
       time: "12.00 – 12:30",
     },
     {
-      color: "bg-accent-red",
+      color: "bg-light-on-background-900",
       description: "Hands-on update and release",
       name: "Design system lifecycle",
       time: "12.30 – 13:30",
     },
     {
-      color: "bg-accent-red",
+      color: "bg-light-on-background-900",
       description: "Q&A session and discussion",
       name: "Recap",
       time: "13.30 – 14:00",
