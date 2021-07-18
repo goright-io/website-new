@@ -63,7 +63,8 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             heading="1 &amp; 2 SEPTEMBER 11-15 EEST"
             link={{
               text: "Get early-bird tickets",
-              href: "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
+              href:
+                "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
             }}
             linkComponent={Link}
           >
@@ -93,5 +94,5 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
       <WhoAreWe />
       <CustomWorkshop />
     </>
-  )
+  );
 }

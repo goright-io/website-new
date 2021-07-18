@@ -3,7 +3,6 @@ import { Text, Icon, Testimonial } from "@goright/design-system";
 const testimonials = [
   {
     name: "David Teissier",
-    // avatar: "/rasheed_avatar.png",
     text:
       "Sherif was a true professional in his business. Great skills in web design and UX. CSS has no secrets for him also. We worked together on web projects to large sizes.",
     colors: "bg-primary-50 text-light-on-background-900",
@@ -24,26 +23,24 @@ const testimonials = [
   },
   {
     name: "Alexander Petrovskiy",
-    // avatar: "/rasheed_avatar.png",
     text:
       "Varya is a highly skilled professional designer and developer. Along with these qualities, she is a great leader, a team player, and a business partner! She is a valuable asset to any team when it comes to solving complex business problems! I'm glad to recommend her!",
     colors: "bg-primary-50 text-light-on-background-900",
   },
 ];
 
+const sectionHeading = (
+  <div className="flex items-start">
+    <Icon name="Forum32" className="mr-6" />
+    <Text variant="6Xl" as="h2">
+      People Say
+    </Text>
+  </div>
+);
 export default function PeopleSay() {
   return (
     <div className="relative max-w-4xl mx-auto overflow-x-visible mt-28">
-      <div className="flex items-start">
-        <Icon name="Forum32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          People Say
-        </Text>
-      </div>
-      <div className="">
-        <Testimonial      
- testimonials={testimonials} />
-      </div>
+      <Testimonial title={sectionHeading} testimonials={testimonials} />
     </div>
   );
 }
