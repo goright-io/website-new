@@ -1,4 +1,4 @@
-name: deploy PRs for preview
+name: Remove PR preview after pull request is closed
 
 on:
   pull_request:
