@@ -3,9 +3,12 @@ import Link from "@components/link";
 import { Text, CtaLink } from "@goright/design-system";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import Image from "next/image";
+import path from "path";
 
 const MDXComponents = {
   a: Link,
+  NextImage: (props) => <Image {...props} />,
 };
 export default function LayoutBlog({ title, seo, ...props }) {
   console.log("hp", props);
@@ -49,11 +52,11 @@ export default function LayoutBlog({ title, seo, ...props }) {
         </div>
         <Text
           variant="6Xl"
-          className="w-full my-2 text-center text-light-on-background-900"
+          className="w-full mt-12 mb-24 text-center text-light-on-background-900"
         >
           {title}
         </Text>
-        <div className="px-4 mx-auto my-8 prose text-justify ">
+        <div className="px-4 mx-auto my-8 prose text-justify">
           <MDXProvider components={MDXComponents}>{props.children}</MDXProvider>
         </div>
       </div>
