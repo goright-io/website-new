@@ -12,7 +12,7 @@ function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
     <LayoutComponent>
       <DefaultSeo
         title="GoRight - design systems consulting and workshops"
-        description="Design systems consulting services and workshops"
+        description="We team up with designers and developers to build and scale design systems"
         keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
         canonical={canonical}
         openGraph={{
@@ -22,10 +22,10 @@ function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
           site_name: "GoRight.io",
           images: [
             {
-              url: baseUrl + "/logo.png",
-              width: 800,
-              height: 600,
-              alt: "GoRight logo",
+              url: baseUrl + "/og-image.png",
+              width: 1000,
+              height: 750,
+              alt: "GoRight — build and scale design systems",
             },
           ],
         }}

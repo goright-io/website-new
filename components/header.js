@@ -7,17 +7,18 @@ export default function Header({ navItems }) {
   const { asPath } = useRouter();
 
   return (
-    <header className="flex items-center w-full px-10 pt-8 mx-auto">
+    <header className="relative flex items-center w-full px-10 pt-8 mx-auto">
       <Link href="https://goright.io">
         <Logo className="mr-auto" />
       </Link>
       <Nav
         items={navItems}
         linkComponent={Link}
-        className="w-5/12 mx-auto"
+        className="w-5/12 ml-auto md:mx-auto"
         currentPath={asPath}
       />
       <Button
+        className="hidden md:block"
         size="small"
         label="Let's&nbsp;talk"
         as="a"

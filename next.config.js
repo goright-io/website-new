@@ -10,6 +10,8 @@ const withMDX = require("@next/mdx")({
   },
 });
 
+const exportPath = process.env.GORIGHT_EXPORT;
+const basePath = process.env.BASEPATH;
 module.exports = withMDX({
   webpack: (config) => {
     config.module.rules.push({
@@ -48,6 +50,8 @@ module.exports = withMDX({
     }
     return defaultPathMap;
   },
+  basePath: basePath ? basePath : "",
+  assetPrefix: basePath ? basePath + "/" : "",
   pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: true, // keep true
 });
