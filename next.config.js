@@ -1,7 +1,5 @@
 const path = require("path");
 const replaceAll = require("string.prototype.replaceall");
-const exportPath = process.env.GORIGHT_EXPORT;
-
 const frontmatterPlugin = require("./lib/frontmatter");
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
@@ -12,6 +10,7 @@ const withMDX = require("@next/mdx")({
 
 const exportPath = process.env.GORIGHT_EXPORT;
 const basePath = process.env.BASEPATH;
+
 module.exports = withMDX({
   webpack: (config) => {
     config.module.rules.push({
