@@ -143,12 +143,6 @@ const Blocks = (props) => {
 };
 
 export default function HandoutPage({ canonical, baseUrl, ...props }) {
-  console.log(
-    "🚀 ~ file: index.js ~ line 147 ~ HandoutPage ~ canonical, baseUrl, ...props",
-    canonical,
-    baseUrl,
-    props
-  );
   return (
     <>
       <NextSeo

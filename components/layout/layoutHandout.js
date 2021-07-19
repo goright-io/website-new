@@ -7,7 +7,6 @@ const MDXComponents = {
   a: Link,
 };
 export default function HandoutLayout(props) {
-  console.log("hp", props);
   const router = useRouter();
   const currentPath = router.asPath;
 
@@ -25,7 +24,6 @@ export default function HandoutLayout(props) {
 
   return (
     <>
-     
       <div className="flex-grow py-8 bg-white border-b">
         <div className="flex bg-white min-w-100">
           <div

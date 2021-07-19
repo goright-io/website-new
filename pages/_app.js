@@ -6,7 +6,6 @@ import { DefaultSeo } from "next-seo";
 const BASE_URL = "https://goright.io";
 
 function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
-  console.log("🚀 ~ file: _app.js ~ line 9 ~ MyApp ~ pageProps", pageProps);
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
 
   return (

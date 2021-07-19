@@ -11,11 +11,9 @@ const MDXComponents = {
   NextImage: (props) => <Image {...props} />,
 };
 export default function LayoutBlog({ title, seo, ...props }) {
-  console.log("hp", props);
   const router = useRouter();
   const currentPath = router.asPath;
   const meta = { title, ...seo };
-  console.log("mta", meta);
   const getParentPath = (currentPath) => {
     if (currentPath.endsWith("/")) {
       currentPath = currentPath.substring(0, currentPath.length - 1); //make sure there is no trailing slash
