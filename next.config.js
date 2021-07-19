@@ -40,6 +40,8 @@ module.exports = withMDX({
     }
     return defaultPathMap;
   },
+  basePath: process.env.BASEPATH,
+  assetPrefix: process.env.BASEPATH + "/",
   pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: true, // keep true
 });
