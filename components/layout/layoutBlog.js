@@ -3,15 +3,13 @@ import Link from "@components/link";
 import { Text, CtaLink } from "@goright/design-system";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import Image from "next/image";
 import path from "path";
 
 const MDXComponents = {
   a: Link,
-  NextImage: (props) => <Image {...props} />,
+  NextImage: (props) => <img {...props} />, // cannot use real NextImage, because it doesn't work in static export
 };
 export default function LayoutBlog({ title, seo, layout, ...props }) {
-  
   const router = useRouter();
   const currentPath = router.asPath;
   const meta = { title, ...seo };
