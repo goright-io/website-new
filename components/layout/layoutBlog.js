@@ -4,10 +4,13 @@ import { Text, CtaLink } from "@goright/design-system";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import path from "path";
+import NextImage from "next/image";
+
+const myLoader = ({ src, width, quality }) => {
 
 const MDXComponents = {
   a: Link,
-  NextImage: (props) => <img {...props} />, // cannot use real NextImage, because it doesn't work in static export
+  NextImage: (props) => <NextImage loader={myLoader} {...props}  />, // cannot use real NextImage, because it doesn't work in static export
 };
 export default function LayoutBlog({ title, seo, layout, ...props }) {
   const router = useRouter();

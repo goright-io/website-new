@@ -34,7 +34,7 @@ export default function Blog(
         <Text as="h1" variant="6Xl" className="max-w-3xl mx-auto mt-4">
           Our Blog
         </Text>
-        <Text variant="xlBolder" className="mt-8">
+        <Text variant="xlBolder" className="mt-16">
           <Emoji symbol="💡" label="ideas" /> The knowlegde we share
         </Text>
         <div className="grid max-w-3xl grid-cols-1 gap-10 mx-auto mt-12">
@@ -42,11 +42,7 @@ export default function Blog(
             posts.length > 0 &&
             posts.map((post) => {
               return (
-                <Link
-                  href={`blog/${post.slug}`}
-                  key={post.title}
-                  className="hover:opacity-75"
-                >
+                <Link href={`/blog/${post.slug}`} key={post.title}>
                   <Text as="h3" variant="3Xl">
                     {post.title}
                   </Text>
