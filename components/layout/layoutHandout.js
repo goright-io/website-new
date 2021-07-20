@@ -6,9 +6,16 @@ import { useRouter } from "next/router";
 const MDXComponents = {
   a: Link,
 };
-export default function HandoutLayout(props) {
+export default function HandoutLayout({
+  title,
+  seo,
+  layout,
+  children,
+  ...props
+}) {
   const router = useRouter();
   const currentPath = router.asPath;
+  const meta = { title, ...seo };
 
   const getParentPath = (currentPath) => {
     if (currentPath.endsWith("/")) {
@@ -26,11 +33,13 @@ export default function HandoutLayout(props) {
     <>
       <div className="flex-grow py-8 bg-white border-b">
         <div className="flex bg-white min-w-100">
-          <div
-            className="container max-w-2xl py-2 mx-auto mb-8 text-xl text-left"
-            underline
-          >
-            <CtaLink arrow="start" as={Link} href={mainPagePath}>
+          <div className="container max-w-2xl py-2 mx-auto mb-8 text-xl text-left">
+            <CtaLink
+              arrow="start"
+              as={Link}
+              href={mainPagePath}
+              underline={true}
+            >
               Back to the Main page
             </CtaLink>
           </div>
@@ -39,10 +48,10 @@ export default function HandoutLayout(props) {
           variant="6Xl"
           className="w-full my-2 text-center text-light-on-background-900"
         >
-          {props.meta.title}
+          {title}
         </Text>
         <div className="px-4 mx-auto my-8 prose text-justify ">
-          <MDXProvider components={MDXComponents}>{props.children}</MDXProvider>
+          <MDXProvider components={MDXComponents}>{children}</MDXProvider>
         </div>
       </div>
     </>

@@ -10,7 +10,8 @@ const MDXComponents = {
   a: Link,
   NextImage: (props) => <Image {...props} />,
 };
-export default function LayoutBlog({ title, seo, ...props }) {
+export default function LayoutBlog({ title, seo, layout, ...props }) {
+  
   const router = useRouter();
   const currentPath = router.asPath;
   const meta = { title, ...seo };
