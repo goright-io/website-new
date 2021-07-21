@@ -5,7 +5,7 @@ import "tailwindcss/tailwind.css";
 import { DefaultSeo } from "next-seo";
 const BASE_URL = "https://goright.io";
 
-function MyApp({ Component,baseUrl, canonical, ...pageProps  }) {
+function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
 
   return (
@@ -32,7 +32,7 @@ function MyApp({ Component,baseUrl, canonical, ...pageProps  }) {
         twitter={{
           // handle: '@handle',
           // site: '@goright.io',
-          cardType: 'summary_large_image',
+          cardType: "summary_large_image",
         }}
       />
       <Component canonical={canonical} baseUrl={baseUrl} {...pageProps} />

@@ -79,6 +79,12 @@ export const blocks = [
     roles: ["developer"],
     day: 2,
   },
+  // {
+  //   title: "Visual regression tests",
+  //   image: TestingIcon,
+  //   slug: "visual-tests",
+  //   roles: ["developer"],
+  // },
   {
     title: "Automatic syncronizations",
     slug: "autosync",
@@ -183,7 +189,7 @@ export default function HandoutPage({ canonical, baseUrl, ...props }) {
           </Text>
         </div>
         {/* CARDS SECTION */}
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
           <Blocks day={1} />
         </div>
       </div>
