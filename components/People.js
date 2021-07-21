@@ -31,7 +31,7 @@ export const people = [
     name: "Irina Illustrova",
     avatar: "/irina.jpg",
     title: "Frontend Engineer",
-    bio: `Irina is an UI/UX developer & frontend engineer with several years of experience building modern applications with React.js. Her current focus is on design systems and development process optimizatons`,
+    bio: `Irina is an UI/UX developer & frontend engineer, who has several years of experience in building modern applications with React.js. Her current focus is on design systems and development process optimizatons`,
     linkedin: "https://www.linkedin.com/in/illustrova/",
     twitter: "https://twitter.com/illustrova",
     align: "",
