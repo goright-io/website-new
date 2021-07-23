@@ -1,14 +1,10 @@
 import { Text, Icon } from "@goright/design-system";
+import SectionTitle from "@components/SectionTitle";
 
 export default function WhyAttend() {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <div className="flex items-start">
-        <Icon name="Idea32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          Why Attend
-        </Text>
-      </div>
+      <SectionTitle icon="Idea32">Why Attend</SectionTitle>
       <div className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-x-20 gap-y-16">
         <div className="">
           <Text as="h3" variant="2Xl">

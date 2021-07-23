@@ -1,8 +1,9 @@
+import classnames from "classnames";
 import { Text, Icon } from "@goright/design-system";
 import TwitterIcon from "../public/twitter.svg";
 import LinkedinIcon from "../public/linkedin.svg";
 import Link from "@components/link";
-import classnames from "classnames";
+import SectionTitle from "@components/SectionTitle";
 
 const people = [
   {
@@ -31,14 +32,7 @@ const people = [
 export default function WhoAreWe({ showHeader = true }) {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      {showHeader && (
-        <div className="flex items-start">
-          <Icon name="Group32" className="mr-6" />
-          <Text variant="6Xl" as="h2">
-            Who Are We
-          </Text>
-        </div>
-      )}
+      {showHeader && <SectionTitle icon="Group32">Who We Are</SectionTitle>}
       {people.map((person) => (
         <div
           key={person.name}
@@ -47,7 +41,7 @@ export default function WhoAreWe({ showHeader = true }) {
             person.align === "reverse" ? "md:flex-row-reverse" : "flex-row"
           )}
         >
-          <div className="w-full md:w-4/12 mb-8 md:mb-0">
+          <div className="w-full mb-8 md:w-4/12 md:mb-0">
             <img src={person.avatar} alt={person.name} />
           </div>
           <div
