@@ -15,9 +15,12 @@
     "@goright/design-system": "^1.0.1",
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
+    "gray-matter": "^4.0.3",
     "next": "latest",
     "next-seo": "^4.26.0",
-    "react-ga": "^3.3.0"
+    "react-ga": "^3.3.0",
+    "string.prototype.replaceall": "^1.0.5",
+    "stringify-object": "^3.3.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",

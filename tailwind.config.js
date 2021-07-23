@@ -27,6 +27,9 @@ const config = {
         reveal: "reveal 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         fadeindelay: "fadein 2s 1s ease-out both",
       },
+      borderRadius: {
+        image: "3rem",
+      },
     },
   },
   variants: {

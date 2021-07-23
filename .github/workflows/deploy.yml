@@ -45,7 +45,9 @@ jobs:
           folder: ./out
           branch: gh-pages
           clean: true
-          clean-exclude: .nojekyll
+          clean-exclude: |
+            .nojekyll
+            CNAME
        
        
       - name: Archive hands-on-workshop export as artifact
@@ -66,8 +68,6 @@ jobs:
         with:
           name: hands-on-workshop
           path: hands-on-workshop/
-        
-      - run: ls
           
       - name: Deploy hands-on-workshop.goright.io
         uses: JamesIves/github-pages-deploy-action@4.1.0
@@ -77,6 +77,8 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           branch: gh-pages
           clean: true
-          clean-exclude: .nojekyll
+          clean-exclude: |
+            .nojekyll
+            CNAME
             
       

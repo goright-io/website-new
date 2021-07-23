@@ -1,5 +1,5 @@
-import WhoAreWe from "../components/WhoAreWe";
+import { people, People } from "@components/People";
 
 export default function About() {
-  return <WhoAreWe showHeader={false} />;
+  return <People people={people} />;
 }
