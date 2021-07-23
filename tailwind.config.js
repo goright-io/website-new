@@ -9,6 +9,7 @@ const resolveConfig = require("tailwindcss/resolveConfig");
 const config = {
   mode: "jit",
   darkMode: false, // or 'media' or 'class'
+  purge: goRightConfig.purge,
   theme: {
     extend: {
       keyframes: {
@@ -40,13 +41,12 @@ const config = {
 let finalConfig = resolveConfig(goRightConfig, config);
 
 // Purge prop is not extendable, should be overriden
-finalConfig.purge = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/\\@goright/design-system/dist/**/*.js",
-  ],
-  safelist: ["bg-highlight-yellow-100", "bg-highlight-primary-100", "bg-6Xl"],
-};
+finalConfig.purge.content = [
+  "./pages/**/*.{js,ts,jsx,tsx}",
+  "./components/**/*.{js,ts,jsx,tsx}",
+  "./node_modules/\\@goright/design-system/dist/**/*.js",
+];
+
+finalConfig.purge.safelist = finalConfig.purge.safelist.concat(["bg-6XL"]);
 
 module.exports = finalConfig;
