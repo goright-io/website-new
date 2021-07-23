@@ -2,6 +2,8 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "@components/link";
 import { Text, CtaLink } from "@goright/design-system";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
+
 
 const MDXComponents = {
   a: Link,
