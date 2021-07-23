@@ -7,12 +7,12 @@ import path from "path";
 import NextImage from "next/image";
 
 const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
+  return `${src}?w=${width}&q=${quality || 75}`;
 };
 
 const MDXComponents = {
   a: Link,
-  NextImage: (props) => <NextImage loader={myLoader} {...props}  />,
+  NextImage: (props) => <NextImage loader={myLoader} {...props}  />, // cannot use real NextImage, because it doesn't work in static export
 };
 export default function LayoutBlog({ title, seo, layout, ...props }) {
   const router = useRouter();
@@ -33,16 +33,15 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
   return (
     <>
       <NextSeo
-        title="Handout materials for Hands-on with Design Systems Workshop"
-        description="All the necessary documentation for the participants of the workshop"
-        keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
-        // canonical={canonical}
+        title="Our Blog - GoRight"
+        description="Sharing our knowledge and experience"
         openGraph={{
           type: "website",
           locale: "en_IE",
-          url: "https://hands-on-workshop.goright.io/handout",
+          url: "https://goright.io/blog",
           site_name: "GoRight.io",
         }}
+        {...seo}
       />
       <div className="flex-grow py-8 bg-white border-b">
         <div className="flex bg-white min-w-100">
