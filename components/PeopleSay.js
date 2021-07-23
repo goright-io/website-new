@@ -38,8 +38,6 @@ const testimonials = [
 const sectionHeading = (
       <SectionTitle
         icon="Forum32"
-        className="justify-start flex-shrink-0 w-full md:flex-col md:w-2/5"
-        iconClassName="pr-4 mb-4 md:mr-0"
       >
         People Say
       </SectionTitle>
