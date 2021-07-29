@@ -3,11 +3,11 @@ import SectionTitle from "@components/SectionTitle";
 
 const testimonials = [
 
-  // {
-  //   name: "Nico Peham - Tech Lead at pcode",
-  //   text:" Building a Design System 🛠️Our members Marlene Höglinger and Nico Peham participated in the Hands-on with Design Systems workshop by Varya Stepanova and Sherif Saleh last week. It was about building design systems with Figma and React and gaining in-depth hands-on experience. It was especially exciting to see how other companies build their design systems and to exchange experiences.",
-  //   colors: "bg-primary-50 text-light-on-background-900",
-  // },
+  {
+    name: "Nico Peham - Tech Lead at pcode",
+    text:" Building a Design System 🛠️Our members Marlene Höglinger and Nico Peham participated in the Hands-on with Design Systems workshop by Varya Stepanova and Sherif Saleh last week. It was about building design systems with Figma and React and gaining in-depth hands-on experience. It was especially exciting to see how other companies build their design systems and to exchange experiences.",
+    colors: "bg-primary-50 text-light-on-background-900",
+  },
   {
     name: "David Teissier - Directeur Général Publicom",
     text:
