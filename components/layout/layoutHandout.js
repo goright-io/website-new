@@ -2,6 +2,8 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "@components/link";
 import { Text, CtaLink } from "@goright/design-system";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
+
 
 const MDXComponents = {
   a: Link,
@@ -31,6 +33,18 @@ export default function HandoutLayout({
 
   return (
     <>
+      <NextSeo
+        title="Handout materials for Hands-on with Design Systems Workshop"
+        description="All the necessary documentation for the participants of the workshop"
+        keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
+        openGraph={{
+          type: "website",
+          locale: "en_IE",
+          url: "https://hands-on-workshop.goright.io/handout",
+          site_name: "GoRight.io",
+        }}
+        {...seo}
+      />
       <div className="flex-grow py-8 bg-white border-b">
         <div className="flex bg-white min-w-100">
           <div className="container max-w-2xl py-2 mx-auto mb-8 text-xl text-left">
