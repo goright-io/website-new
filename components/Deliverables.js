@@ -1,14 +1,10 @@
 import { Text, Icon } from "@goright/design-system";
+import SectionTitle from "@components/SectionTitle";
 
 export default function Deliverables() {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <div className="flex items-start">
-        <Icon name="Delivery32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          Deliverables
-        </Text>
-      </div>
+      <SectionTitle icon="Delivery32">Deliverables</SectionTitle>
       <Text variant="xlBolder" as="p" className="mt-10">
         By the end of the workshop, each team has a ready-to-use component
         library, an end product built out of that, and a tuned process to ensure

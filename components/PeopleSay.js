@@ -1,4 +1,5 @@
 import { Text, Icon, Testimonial } from "@goright/design-system";
+import SectionTitle from "@components/SectionTitle";
 
 const testimonials = [
 
@@ -35,12 +36,11 @@ const testimonials = [
 ];
 
 const sectionHeading = (
-  <div className="flex items-start">
-    <Icon name="Forum32" className="mr-6" />
-    <Text variant="6Xl" as="h2">
-      People Say
-    </Text>
-  </div>
+      <SectionTitle
+        icon="Forum32"
+      >
+        People Say
+      </SectionTitle>
 );
 export default function PeopleSay() {
   return (

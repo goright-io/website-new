@@ -1,14 +1,12 @@
 import { Text, Icon, Button } from "@goright/design-system";
+import SectionTitle from "@components/SectionTitle";
 
 export default function CustomWorkshop() {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <div className="flex items-start">
-        <Icon name="ChartMarimekko32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          Want a custom workshop for your team?
-        </Text>
-      </div>
+      <SectionTitle icon="ChartMarimekko32">
+        Want a custom workshop for your team?
+      </SectionTitle>
       <Text variant="xlBolder" className="flex mt-16">
         Need a custom version? We can tailor this workshop for your company.
         When focused on your product and taking into account your team shape,

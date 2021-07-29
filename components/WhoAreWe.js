@@ -1,15 +1,17 @@
-import { people, People } from "@components/People";
+import classnames from "classnames";
 import { Text, Icon } from "@goright/design-system";
+import TwitterIcon from "../public/twitter.svg";
+import LinkedinIcon from "../public/linkedin.svg";
+import Link from "@components/link";
+import SectionTitle from "@components/SectionTitle";
+
+import { people, People } from "@components/People";
+
 
 export default function WhoAreWe() {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <div className="flex items-start">
-        <Icon name="Group32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          Who Are We
-        </Text>
-      </div>
+      <SectionTitle icon="Group32">Who We Are</SectionTitle>
       <People people={people.slice(0,2)} />
     </div>
   );

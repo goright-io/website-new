@@ -1,4 +1,5 @@
 import { Text, Icon, Timetable } from "@goright/design-system";
+import SectionTitle from "@components/SectionTitle";
 
 export default function WorkshopContent() {
   const timetableDay1 = [
@@ -90,12 +91,7 @@ export default function WorkshopContent() {
   ];
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <div className="flex items-start">
-        <Icon name="TableOfContents32" className="mr-6" />
-        <Text variant="6Xl" as="h2">
-          Workshop content
-        </Text>
-      </div>
+      <SectionTitle icon="TableOfContents32">Workshop content</SectionTitle>
       <Timetable className="w-full mt-16" data={timetableDay1} header="Day 1" />
       <Timetable className="w-full mt-16" data={timetableDay2} header="Day 2" />
     </div>

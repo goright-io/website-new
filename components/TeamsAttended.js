@@ -1,4 +1,5 @@
 import { Text, Icon } from "@goright/design-system";
+import SectionTitle from "@components/SectionTitle";
 
 // Order of logos can be changed here.
 const logos = [
