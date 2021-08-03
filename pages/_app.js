@@ -3,11 +3,11 @@ import { LayoutDefault, LayoutWorkshop } from "@components/layout";
 import "@goright/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
 import { DefaultSeo } from "next-seo";
-const BASE_URL = "https://goright.io";
+import path from "path";
+import { getThumbnailPath } from "lib/api";
 
-function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
+function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
-
   return (
     <LayoutComponent>
       <DefaultSeo
@@ -20,14 +20,15 @@ function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
           locale: "en_IE",
           url: baseUrl,
           site_name: "GoRight.io",
-          images: [
-            {
-              url: baseUrl + "/og-image.png",
-              width: 1000,
-              height: 750,
-              alt: "GoRight — build and scale design systems",
-            },
-          ],
+          images: thumb &&
+            baseUrl && [
+              {
+                url: path.join(baseUrl, "images", thumb),
+                width: 1000,
+                height: 750,
+                alt: "GoRight — build and scale design systems",
+              },
+            ],
         }}
         twitter={{
           // handle: '@handle',
@@ -42,8 +43,13 @@ function MyApp({ Component, baseUrl, canonical, ...pageProps }) {
 
 MyApp.getInitialProps = async ({ ctx: { pathname } }) => {
   const exportedSubpath = process.env.GORIGHT_EXPORT;
+  const BASE_URL = (() => {
+    if (process.env.NODE_ENV === "development") return "http://localhost:3000";
+    return process.env.BASEPATH ? process.env.BASEPATH : "https://goright.io";
+  })();
+  const thumb = getThumbnailPath(pathname);
 
-  let pageProps = { baseUrl: BASE_URL };
+  let pageProps = { baseUrl: BASE_URL, thumb: thumb };
   if (!exportedSubpath) return pageProps;
 
   return { ...pageProps, canonical: BASE_URL + pathname };
