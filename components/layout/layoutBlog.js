@@ -12,7 +12,7 @@ const myLoader = ({ src, width, quality }) => {
 
 const MDXComponents = {
   a: Link,
-  NextImage: (props) => <NextImage loader={myLoader} {...props}  />, // cannot use real NextImage, because it doesn't work in static export
+  NextImage: (props) => <NextImage loader={myLoader} {...props} />, // cannot use real NextImage, because it doesn't work in static export
 };
 export default function LayoutBlog({ title, seo, layout, ...props }) {
   const router = useRouter();
@@ -33,7 +33,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
   return (
     <>
       <NextSeo
-        title="Our Blog - GoRight"
+        title={title + " - Blog - GoRight"}
         description="Sharing our knowledge and experience"
         openGraph={{
           type: "website",
