@@ -44,10 +44,22 @@ export const blocks = [
     day: 1,
   },
   {
-    title: "Coding session",
-    slug: "coding-session",
+    title: "Coding practice",
+    slug: "coding-practice",
     roles: ["developer"],
     day: 1,
+  },
+  {
+    title: "Preparing to release",
+    slug: "preparing-release",
+    roles: ["developer"],
+    day: 2,
+  },
+  {
+    title: "Design Changes",
+    slug: "re-design",
+    roles: ["designer"],
+    day: 2,
   },
   {
     title: "Releasing the library",
@@ -59,12 +71,6 @@ export const blocks = [
     title: "Product update",
     slug: "product-update",
     roles: ["developer"],
-    day: 2,
-  },
-  {
-    title: "Design Changes",
-    slug: "re-design",
-    roles: ["designer"],
     day: 2,
   },
   {
