@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, Emoji, Card, Icon } from "@goright/design-system";
+import { Text, Emoji, Card } from "@goright/design-system";
+import { ArrowRight24 } from "@carbon/icons-react";
 import WorkshopContent from "@components/WorkshopContent";
 import Deliverables from "@components/Deliverables";
 import WhyAttend from "@components/WhyAttend";
@@ -20,7 +21,7 @@ export default function Blog(
     <>
       <NextSeo
         title="GoRight Blog"
-        description="Sharing our knowledge on design systems with the world"
+        description="Sharing our knowledge with the world"
         keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
         canonical={canonical}
         openGraph={{
@@ -29,26 +30,35 @@ export default function Blog(
           site_name: "GoRight.io",
         }}
       />
-      {/***** HERO SECTION *****/}
-      <div className="leading-normal tracking-normal text-center text-light-on-background-900">
-        <Text as="h1" variant="6Xl" className="max-w-3xl mx-auto mt-4">
-          Our Blog
+      <div className="leading-normal tracking-norma text-light-on-background-900">
+        <Text as="h1" variant="6Xl" className="mt-4">
+         Blog.
         </Text>
-        <Text variant="xlBolder" className="mt-16">
-          <Emoji symbol="💡" label="ideas" /> The knowlegde we share
-        </Text>
-        <div className="grid max-w-3xl grid-cols-1 gap-10 mx-auto mt-12">
+        <div className="mx-auto mt-16 border-b border-light-on-background-900">
           {posts &&
             posts.length > 0 &&
             posts.map((post) => {
               return (
-                <Link href={`/blog/${post.slug}`} key={post.title}>
-                  <Text as="h3" variant="3Xl">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  key={post.title}
+                  className="flex flex-wrap md:flex-nowrap items-center py-6 text-left border-t border-light-on-background-900 group"
+                >
+                  <Text
+                    as="h3"
+                    variant="xlBolder"
+                    className="w-full md:w-4/12 group-hover:text-primary-500 md:mb-0 mb-5"
+                  >
                     {post.title}
                   </Text>
-                  <Text as="p" variant="base">
+                  <Text
+                    as="p"
+                    variant="xl"
+                    className="w-full md:w-7/12 md:ml-10 group-hover:text-primary-500"
+                  >
                     {post.description}
                   </Text>
+                  <ArrowRight24 className="hidden md:flex ml-10 mr-4 transition duration-200 transform opacity-0 group-hover:opacity-100 group-hover:text-primary-500 group-hover:translate-x-1 motion-reduce:transform-none" />
                 </Link>
               );
             })}
