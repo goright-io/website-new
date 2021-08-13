@@ -80,7 +80,7 @@ export function People({ people }) {
               )}
             >
               <Link
-                href={person.linkedin}
+                href={person.twitter}
                 className="cursor-pointer hover:opacity-60 group outline-0"
               >
                 <TwitterIcon
@@ -92,7 +92,7 @@ export function People({ people }) {
                 />
               </Link>
               <Link
-                href={person.twitter}
+                href={person.linkedin}
                 className="cursor-pointer hover:opacity-60 group outline-0"
               >
                 <LinkedinIcon
