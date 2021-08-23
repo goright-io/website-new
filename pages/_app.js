@@ -23,7 +23,7 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
           images: thumb &&
             baseUrl && [
               {
-                url: path.join(baseUrl, "images", thumb),
+                url: baseUrl + "/images" + thumb,
                 width: 1000,
                 height: 750,
                 alt: "GoRight — build and scale design systems",
@@ -41,18 +41,22 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   );
 }
 
-MyApp.getInitialProps = async ({ ctx: { pathname } }) => {
-  const exportedSubpath = process.env.GORIGHT_EXPORT;
-  const BASE_URL = (() => {
-    if (process.env.NODE_ENV === "development") return "http://localhost:3000";
-    return process.env.BASEPATH ? process.env.BASEPATH : "https://goright.io";
-  })();
-  const thumb = getThumbnailPath(pathname);
+MyApp.getInitialProps = async ({ ctx: { pathname, req } }) => {
+  if (req) {
+    const exportedSubpath = process.env.GORIGHT_EXPORT;
+    const BASE_URL = (() => {
+      if (process.env.NODE_ENV === "development")
+        return "http://localhost:3000";
+      return process.env.BASEPATH ? process.env.BASEPATH : "https://goright.io";
+    })();
+    const thumb = getThumbnailPath(pathname);
 
-  let pageProps = { baseUrl: BASE_URL, thumb: thumb };
-  if (!exportedSubpath) return pageProps;
+    let pageProps = { baseUrl: BASE_URL, thumb: thumb };
+    if (!exportedSubpath) return pageProps;
 
-  return { ...pageProps, canonical: BASE_URL + pathname };
+    return { ...pageProps, canonical: BASE_URL + pathname };
+  }
+  return {};
 };
 
 export default MyApp;
