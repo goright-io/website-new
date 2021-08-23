@@ -7,8 +7,6 @@ import path from "path";
 import { getThumbnailPath } from "lib/api";
 
 function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
-  console.log("hasthumb=>", thumb);
-
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
   return (
     <LayoutComponent>
