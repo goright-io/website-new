@@ -62,7 +62,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             key="september"
             heading="1 &amp; 2 SEPTEMBER 11-15 EEST"
             link={{
-              text: "Get early-bird tickets",
+              text: "Grab your ticket",
               href:
                 "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
             }}
