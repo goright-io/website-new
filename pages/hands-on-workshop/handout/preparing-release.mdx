@@ -47,10 +47,13 @@ To keep the system consistent, you should always provide visual references for y
 components. This will make automatic testing work smoothly. This is how
 you can do it:
 
-1. Run the testing UI with `yarn test:creevey:ui`
+1. Run the testing UI with `yarn test:ui`
 2. Run the tests and examine the results
-  1. Noticed the inconcistency? Fix and run the tests again.
-  2. There is a change but you were expecting it? Approve.
+1. Noticed the inconcistency? Fix and run the tests again.
+2. There is a change but you were expecting it? Approve.
+ 
+**Hint**. *Use `yarn test:update` to approve all screenshots at once*
+
 
 If you created a new component, or visualy changed the existing one, it
 will always go with the change of their visual references. Notice the changes
