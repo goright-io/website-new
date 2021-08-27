@@ -50,6 +50,12 @@ you need a custom processing via Style Dictionary.
 
 **Let's write a custom processing for spacing tokens.**
 
+When new token files appear in your `dist` folder, they should be re-exported from the tokens folder. For example, to re-export spacing, you will need to add the following into `design-system/src/tokens/index.js`:
+
+```
+import * as spacing from "./dist/spacing";
+```
+
 
 ## 3. Display design tokens in Storybook
 
