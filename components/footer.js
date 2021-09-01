@@ -29,7 +29,7 @@ export default function Footer() {
               rel="noopener"
               href="https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129"
             >
-              Get early-bird tickets
+              Get the tickets
             </CtaLink>
           </div>
         </div>
