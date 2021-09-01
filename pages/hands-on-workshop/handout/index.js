@@ -56,7 +56,7 @@ export const blocks = [
     day: 2,
   },
   {
-    title: "Design Changes",
+    title: "New challenge",
     slug: "re-design",
     roles: ["designer"],
     day: 2,
