@@ -101,7 +101,7 @@ export const blocks = [
     title: "Feedback Form",
     slug: "feedback",
     url:
-      "https://docs.google.com/forms/d/124ha3LG7-07rizB9yjoqNGkB31Yzw6jtFvImsz7-Utg",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdzqJp29DXtO9SAEH2r7DpfgQCcY4vLH_z2oWz_-3MQBvJTMg/viewform?usp=sf_link",
     roles: ["designer", "developer"],
     day: 2,
   },
@@ -196,8 +196,8 @@ export default function HandoutPage({ canonical, baseUrl, ...props }) {
         </div>
         {/* CARDS SECTION */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
-          <Blocks day={1} />
-          {/* <Blocks day={"all"} /> */}
+          {/* <Blocks day={1} /> */}
+          <Blocks day={"all"} />
         </div>
       </div>
     </>
