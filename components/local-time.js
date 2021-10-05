@@ -9,28 +9,31 @@ const isDstObserved = () =>
 
 function getTimezoneAbbr(tzOffset) {
   switch (tzOffset) {
-    case 0:
-      return "BST";
-    case 1:
-      return "CEST";
-    case 3:
-      return "MSK";
-    case 2:
+    case -7:
+      return "MST"; // MST (UTC−07:00)
+    case -6:
+      return "CST"; // CST (UTC−06:00)
+    case -5:
+      return "EST"; // EST (UTC−05:00)
+    case -8:
     default:
-      return "EEST";
+      return "PST"; // PST (UTC−08:00)
   }
 }
-export default function LocalTime({
+
+export default function localTime(
   start,
   end,
   format = "%start%-%end% %timezone%",
-}) {
+  ) {
   let tzOffset = -new Date().getTimezoneOffset() / 60;
   tzOffset = isDstObserved ? tzOffset - 1 : tzOffset;
-  if (tzOffset >= 0 && tzOffset <= 3) {
-    start = start - 2 + tzOffset;
-    end = end - 2 + tzOffset;
+
+  if (tzOffset >= -8 && tzOffset <= -4) {
+    start = start + 8 + tzOffset;
+    end = end + 8 + tzOffset;
   }
+
   const zoneAbbr = getTimezoneAbbr(tzOffset);
   return format
     .replace("%start%", start)
