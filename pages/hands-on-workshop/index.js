@@ -4,6 +4,7 @@ import WorkshopContent from "@components/WorkshopContent";
 import Deliverables from "@components/Deliverables";
 import WhyAttend from "@components/WhyAttend";
 import TeamsAttended from "@components/TeamsAttended";
+import localTime from "@components/local-time";
 import WhoAreWe from "@components/WhoAreWe";
 import PeopleSay from "@components/PeopleSay";
 import WhatYouWillLearn from "@components/WhatYouWillLearn";
@@ -22,7 +23,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
         openGraph={{
           type: "website",
           locale: "en_IE",
-          url: "https://hands-on-workshop.goright.io",
+          url: "https://goright.io/hands-on-workshop",
           site_name: "GoRight.io",
           images: [
             {
@@ -60,11 +61,11 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
         <div className="grid grid-cols-1 gap-10 mt-6 sm:grid-cols-2 md:grid-cols-3">
           <Card
             key="september"
-            heading="1 &amp; 2 SEPTEMBER 11-15 EEST"
+            heading={`2 & 3 DECEMBER ${localTime(9, 13)}`}
             link={{
               text: "Grab your ticket",
               href:
-                "https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129",
+                "https://www.eventbrite.ch/e/hands-on-with-design-systems-december-tickets-185528118597",
             }}
             linkComponent={Link}
           >
@@ -72,8 +73,8 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
               <Text variant="smBolder" className="mb-3">
                 Available tickets:
               </Text>
-              <p>Designers: 5</p>
-              <p>Developers: 7</p>
+              <p>Designers: 8</p>
+              <p>Developers: 8</p>
             </div>
           </Card>
           <Card

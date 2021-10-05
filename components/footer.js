@@ -1,4 +1,5 @@
 import { Text, CtaLink } from "@goright/design-system";
+import localTime from "@components/local-time";
 export default function Footer() {
   return (
     <footer className="bg-light-on-background-900 text-light-on-background-100">
@@ -18,18 +19,16 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-baseline justify-center flex-grow md:flex-row sm:text-center">
             <Text variant="lg">
-              Upcoming workshop: 1{"\u00A0"}&{"\u00A0"}2{"\u00A0"}SEPTEMBER,
-              {"\u00A0"}
-              11-15{"\u00A0"}EEST
+              Upcoming workshop: 2{"\u00A0"}&{"\u00A0"}3{"\u00A0"}DECEMBER {localTime(9, 13)}
             </Text>
             <CtaLink
               as="a"
               className="md:ml-8 text-light-on-background-50 hover:!text-light-on-background-50 focus:!opacity-50 whitespace-nowrap"
               target="_blank"
               rel="noopener"
-              href="https://www.eventbrite.fi/e/hands-on-with-design-systems-september-tickets-154073882129"
+              href="https://www.eventbrite.ch/e/hands-on-with-design-systems-december-tickets-185528118597"
             >
-              Get the tickets
+              Early-bird tickets are available
             </CtaLink>
           </div>
         </div>
