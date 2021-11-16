@@ -73,8 +73,8 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
               <Text variant="smBolder" className="mb-3">
                 Available tickets:
               </Text>
-              <p>Designers: 2</p>
-              <p>Developers: 6</p>
+              <p>Designers: SOLD OUT</p>
+              <p>Developers: 4</p>
             </div>
           </Card>
           <Card
