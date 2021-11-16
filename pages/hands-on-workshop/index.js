@@ -74,7 +74,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
                 Available tickets:
               </Text>
               <p>Designers: SOLD OUT</p>
-              <p>Developers: 4</p>
+              <p>Developers: 5</p>
             </div>
           </Card>
           <Card
