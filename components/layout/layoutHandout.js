@@ -39,7 +39,7 @@ export default function HandoutLayout({
         keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
         openGraph={{
           type: "website",
-          locale: "en_IE",
+          locale: "en_US",
           url: "https://hands-on-workshop.goright.io/handout",
           site_name: "GoRight.io",
         }}

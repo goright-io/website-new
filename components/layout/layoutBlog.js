@@ -37,7 +37,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
         description="Sharing our knowledge and experience"
         openGraph={{
           type: "website",
-          locale: "en_IE",
+          locale: "en_US",
           url: "https://goright.io/blog",
           site_name: "GoRight.io",
         }}
@@ -45,7 +45,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
       />
       <div className="flex-grow py-8 bg-white border-b">
         <div className="flex bg-white min-w-100">
-          <div className="container max-w-2xl py-2 mx-auto mb-8 text-xl text-left">
+          <div className="w-full max-w-2xl px-4 py-2 mx-auto my-8 mb-8 text-xl text-left ">
             <CtaLink arrow="start" as={Link} href={blogPagePath}>
               Back to Blog
             </CtaLink>
@@ -62,5 +62,5 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
         </div>
       </div>
     </>
-  );
+  )
 }
