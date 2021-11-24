@@ -1115,10 +1115,10 @@
   dependencies:
     purgecss "^4.0.3"
 
-"@goright/design-system@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@goright/design-system/-/design-system-1.0.3.tgz#71e8865a6c612f2e18d0e6b217fd03131d780e33"
-  integrity sha512-KcElZ2b6+iJK1vvK4TVuka6NUTLyreR53uPhsebC2qmbXrqQMYZrohBtDu+pNCTLJ2CxBdqK41oohBJwNntbBA==
+"@goright/design-system@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@goright/design-system/-/design-system-1.0.14.tgz#5fcb256466270aa5e0a3d016e5b2ef79c4b87ce4"
+  integrity sha512-UkmGQfdQCwOMqZ1lG20OovevDlg+tUbyMd64M5qVmc1C0zjBFCkpG+tW0rMudDHaNQViofJQu4dpT+TxJbhKnw==
   dependencies:
     "@carbon/icons-react" "^10.32.0"
     "@tailwindcss/typography" "^0.4.1"

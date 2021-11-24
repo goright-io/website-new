@@ -22,7 +22,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
         canonical={canonical}
         openGraph={{
           type: "website",
-          locale: "en_IE",
+          locale: "en_US",
           url: "https://goright.io/hands-on-workshop",
           site_name: "GoRight.io",
           images: [

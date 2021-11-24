@@ -17,7 +17,7 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
         canonical={canonical}
         openGraph={{
           type: "website",
-          locale: "en_IE",
+          locale: "en_US",
           url: baseUrl,
           site_name: "GoRight.io",
           images: thumb &&

@@ -12,6 +12,16 @@ const config = {
   purge: goRightConfig.purge,
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1.5rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+      },
       keyframes: {
         fadein: {
           "0%": { opacity: 0 },
@@ -39,7 +49,7 @@ const config = {
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
-};
+}
 
 let finalConfig = resolveConfig(goRightConfig, config);
 

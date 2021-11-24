@@ -72,22 +72,31 @@ class MyDocument extends Document {
           <link
             rel="mask-icon"
             href="/static/safari-pinned-tab.svg"
-            color="#0047ff"
+            color="#0a5c51"
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <meta name="msapplication-TileColor" content="#0047ff"></meta>
+          <meta name="msapplication-TileColor" content="#0a5c51" />
           <meta
             name="msapplication-config"
             content="/static/browserconfig.xml"
-          ></meta>
-          <meta name="theme-color" content="#ffffff"></meta>
+          />
+          <meta
+            name="theme-color"
+            content="#ffffff"
+            media="(prefers-color-scheme: light)"
+          />
+          <meta
+            name="theme-color"
+            content="#0a5c51"
+            media="(prefers-color-scheme: dark)"
+          />
         </Head>
         <body className="">
           <Main />
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 

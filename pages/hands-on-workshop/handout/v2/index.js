@@ -147,7 +147,7 @@ export default function HandoutPage({ canonical, baseUrl, ...props }) {
         canonical={canonical}
         openGraph={{
           type: "website",
-          locale: "en_IE",
+          locale: "en_US",
           url: "https://hands-on-workshop.goright.io/handout",
           site_name: "GoRight.io",
           images: [
