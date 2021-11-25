@@ -14,6 +14,13 @@ export const blocks = [
     day: 1,
   },
   {
+    title: "Introducion",
+    slug: "introducion",
+    roles: ["designer", "developer"],
+    day: 1,
+    url: "https://miro.com/app/board/uXjVOf0JQik=/",
+  },
+  {
     title: "Making a toast",
     slug: "toast",
     roles: ["designer", "developer"],
