@@ -108,7 +108,7 @@ export const blocks = [
     title: "Feedback Form",
     slug: "feedback",
     url:
-      "https://docs.google.com/forms/d/e/1FAIpQLSdzqJp29DXtO9SAEH2r7DpfgQCcY4vLH_z2oWz_-3MQBvJTMg/viewform?usp=sf_link",
+      "https://forms.gle/rR2teKjU5LjAcnXz6",
     roles: ["designer", "developer"],
     day: 2,
   },
