@@ -14,7 +14,7 @@ export default function Header({ navItems }) {
       <div className="bg-yellow-100">
         <div className="container">
           <div className="flex flex-col items-baseline justify-between py-3 md:flex-row">
-            <Link
+            {/* <Link
               href="/hands-on-workshop"
               className="inline-block underline hover:text-primary-500"
             >
@@ -22,8 +22,8 @@ export default function Header({ navItems }) {
                 Upcoming workshop: 2{"\u00A0"}&{"\u00A0"}3{"\u00A0"}December{" "}
                 {localTime(9, 13)}
               </Text>
-            </Link>
-            <CtaLink
+            </Link> */}
+            {/* <CtaLink
               as="a"
               className="md:ml-8 text-light-on-background-50 whitespace-nowrap"
               target="_blank"
@@ -31,7 +31,7 @@ export default function Header({ navItems }) {
               href="https://www.eventbrite.ch/e/hands-on-with-design-systems-december-tickets-185528118597"
             >
               Tickets are available
-            </CtaLink>
+            </CtaLink> */}
           </div>
         </div>
       </div>
