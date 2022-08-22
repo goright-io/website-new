@@ -54,20 +54,20 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             .
           </span>
         </Text>
-        <Text variant="xlBolder" className="mt-16">
+        {/* <Text variant="xlBolder" className="mt-16">
           Upcoming workshops
           <Emoji symbol="👇" label="hand" />
-        </Text>
-        <div className="grid grid-cols-1 gap-10 mt-6 sm:grid-cols-2 md:grid-cols-3">
+        </Text> */}
+        <div className="grid grid-cols-1 gap-10 mt-24 sm:grid-cols-2 md:grid-cols-3">
           <Card
+            className="hover:!cursor-default hover:!bg-gray-300 bg-gray-300 opacity-60 [&_a]:!cursor-default [&_a]:hover:!text-primary-500 [&_span]:!transform-none"
             key="september"
             heading={`2 & 3 DECEMBER ${localTime(9, 13)}`}
             link={{
               text: "Grab your ticket",
-              href:
-                "https://www.eventbrite.ch/e/hands-on-with-design-systems-december-tickets-185528118597",
+              //href: "https://www.eventbrite.ch/e/hands-on-with-design-systems-december-tickets-185528118597",
             }}
-            linkComponent={Link}
+            //linkComponent={Link}
           >
             <div className="mb-8">
               <Text variant="smBolder" className="mb-3">
@@ -82,7 +82,14 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             heading="Need a custom workshop for your team?"
             link={{ text: "Let's talk", href: "mailto:hello@goright.io" }}
             linkComponent={Link}
-          />
+          >
+            <div className="mb-8">
+              <Text variant="smBolder" className="mb-3">
+                At the moment, we do not plan public workshops. But we will be
+                happy to arrange a private workshop for your team
+              </Text>
+            </div>
+          </Card>
         </div>
       </div>
       <WhatYouWillLearn />
