@@ -28,6 +28,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta http-equiv="refresh" content="0; https://bridge-the-gap.dev/" />
           {/* Fonts */}
           {/* <link href="/fonts/styles.css" rel="stylesheet" /> */}
           {/* Global Site Tag (gtag.js) - Google Analytics */}
